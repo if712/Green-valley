@@ -1597,15 +1597,7 @@ img {
   padding: 30px 0px;
   width: 100%;
 }
-.main-logo {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-}
-.main-logo:hover {
-  text-decoration: none;
-}
-.main-logo__logo-text {
+.page-header__inner__logo-text {
   color: #0ab89d;
   font-size: 15px;
   text-transform: uppercase;
@@ -1726,6 +1718,7 @@ img {
   width: 100%;
   padding: 30px 0;
   background-color: #0ab89d;
+  background-image: url('../img/reviews.jpg');
 }
 .reviews__title {
   color: #fafafa;
