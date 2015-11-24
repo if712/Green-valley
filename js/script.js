@@ -1,4 +1,20 @@
-$(document).ready(function() {
+$(document).ready(function(){
+
+	$(".promo-slider__paginator-item1").click(function(){
+		var paginatorId = $(this).attr("id");
+		$(".promo-slider__paginator-item2").attr("id", "");
+		$(this).attr("id", "paginator-item-shown");
+		$("#promo-slider__corporate").css("display", "none");
+		$("#promo-slider__family").css("display", "block");
+	});
+
+	$(".promo-slider__paginator-item2").click(function(){
+		var paginatorId = $(this).attr("id");
+		$(".promo-slider__paginator-item1").attr("id", "");
+		$(this).attr("id", "paginator-item-shown");
+		$("#promo-slider__family").css("display", "none");
+		$("#promo-slider__corporate").css("display", "block");
+	});
 
 
 	/* reviews-carousel */
@@ -44,20 +60,12 @@ $(document).ready(function() {
 	});
 
 
-	$("#gallery-carousel a").click(function(e){
-		e.preventDefault();
-		var gallery_main_img = $(this).children().attr('src');
+	$("#gallery-carousel img").click(function(){
+		var gallery_main_img = $(this).attr('src');
 		$('#gallery__main-img').attr('src', gallery_main_img);
 	});
 
-
-
-	/*$("#gallery-carousel a").click(function(e){
-		e.preventDefault();
-		var gallery_main_img = $(this).attr('href');
-		$('#gallery-main-img').attr('src', gallery_main_img);
-	});*/
-
+});
 
 /*
 
@@ -79,6 +87,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('main-menu').slideToggle();
 	});
+
+	$(".promo-slider__paginator-item").click(function(){
+		var paginatorId = $(this).attr("id");
+		if(paginatorId == ""){
+			$(".promo-slider__paginator-item").attr("id", "");
+			$(this).attr("id", "paginator-item-shown");
+		}
+
+	});
 */
 
-});

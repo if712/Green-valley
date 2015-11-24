@@ -21,59 +21,63 @@
 
     <header class="page-header">
       <div class="page-header__inner">
-        <div class="row">
-          <div class="page-header__logo col-xs-offset-1 col-xs-10 col-lg-offset-1 col-lg-1">
-            <a href="" class="page-header__logo-text">logo</a>
-          </div>
 
-          <div class="col-xs-1"><a href="">burger</a></div>
-
-          <div class="col-lg-4 visible-lg-block">
-            <nav class="main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="" class="main-nav__link">Номера</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-lg-3 visible-lg-block">
-            <div class="page-header__contacts">
-              <b class="page-header__phone">+ 7 812 777-55-88</b>
-              г. Санкт-Петербург, Приморское шоссе, д. 600
-            </div>
-          </div>
-
-          <div class="col-lg-2 visible-lg-block">
-            <button class="btn btn--orange">Забронировать</button>
-          </div>
+        <div class="page-header__logo">
+          <a href="" class="page-header__logo-text">Green valley</a>
         </div>
+
+        <div class="page-header__burger"><a href=""></a></div>
+
+        <nav class="page-header__nav">
+          <ul class="page-header__nav-list">
+            <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Номера</a></li>
+            <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Коттедж</a></li>
+            <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Ресторан</a></li>
+            <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Отдых</a></li>
+            <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="page-header__contacts">
+          <b class="page-header__phone">+ 7 812 777-55-88</b>
+          г. Санкт-Петербург, Приморское шоссе, д. 600
+        </div>
+
+        <button class="page-header__btn btn--orange">Забронировать</button>
+
       </div>
     </header>
 
 
     <section class="promo-slider">
-    	<ul class="promo-slider__paginator">
-    		<li><a href="#slide_01">Семейный отдых</a></li>
-    		<li><a href="#slide_02">Корпоративный отдых</a></li>
-    	</ul>
   		<div class="promo-slider__wrapper">
-  			<section class="promo-slider__item">
+
+  			<div class="promo-slider__item" id="promo-slider__family">
+          <img src="img/promo-slider.jpg" class="promo-slider__item-img">
+
   				<div class="promo-slider__item-text">
-  					<h1 class="promo-slider__item-title">Семейный отдых на берегу финского залива</h1>
+  					<h1 class="promo-slider__item-title">Семейный отдых на берегу Финского залива</h1>
   					<p class="accent-text">Green Valley - это современная база отдых в курортном районе для здорового отдыха всей семьей</p>
   				</div>
-  			</section>
-        <section class="promo-slider__item">
+
+  			</div>
+
+        <div class="promo-slider__item" id="promo-slider__corporate">
+          <img src="img/promo-slider.jpg" class="promo-slider__item-img">
+
           <div class="promo-slider__item-text">
-            <h1 class="promo-slider__item-title">Семейный отдых на берегу финского залива</h1>
-            <p class="accent-text">Green Valley - это современная база отдых в курортном районе для здорового отдыха всей семьей</p>
+            <h1 class="promo-slider__item-title">Корпоративный отдых на берегу Финского залива</h1>
+            <p class="accent-text">Green Valley - это современная база отдых в курортном районе для здорового отдыха всей командой</p>
           </div>
-        </section>
+
+        </div>
+
   		</div>
+
+      <ul class="promo-slider__paginator">
+        <li type="radio" class="promo-slider__paginator-item1" id="paginator-item-shown">Семейный отдых<span></span></li type="radio">
+        <li type="radio" class="promo-slider__paginator-item2" id="">Корпоративный<span></span></li type="radio">
+      </ul>
     </section>
 
 
@@ -103,13 +107,13 @@
           <img src="img/showed.jpg" id="gallery__main-img" class="gallery__showed-img">
         </div>
         <ul id="gallery-carousel" class="gallery__thumbnails owl-carousel">
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-1.jpg" class="gallery__thumbnail-img"></a></li>
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-2.jpg" class="gallery__thumbnail-img"></a></li>
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-3.jpg" class="gallery__thumbnail-img"></a></li>
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-4.jpg" class="gallery__thumbnail-img"></a></li>
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-5.jpg" class="gallery__thumbnail-img"></a></li>
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-6.jpg" class="gallery__thumbnail-img"></a></li>
-          <li class="gallery__item"><a href="" class="gallery__link"><img src="img/thumbnail-7.jpg" class="gallery__thumbnail-img"></a></li>
+          <li class="gallery__item"><img src="img/thumbnail-1.jpg" class="gallery__thumbnail-img"></li>
+          <li class="gallery__item"><img src="img/thumbnail-2.jpg" class="gallery__thumbnail-img"></li>
+          <li class="gallery__item"><img src="img/thumbnail-3.jpg" class="gallery__thumbnail-img"></li>
+          <li class="gallery__item"><img src="img/thumbnail-4.jpg" class="gallery__thumbnail-img"></li>
+          <li class="gallery__item"><img src="img/thumbnail-5.jpg" class="gallery__thumbnail-img"></li>
+          <li class="gallery__item"><img src="img/thumbnail-6.jpg" class="gallery__thumbnail-img"></li>
+          <li class="gallery__item"><img src="img/thumbnail-7.jpg" class="gallery__thumbnail-img"></li>
         </ul>
         <span class="gallery__btn gallery__prev"></span>
         <span class="gallery__btn gallery__next"></span>
