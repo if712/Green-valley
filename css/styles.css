@@ -1805,27 +1805,45 @@ a:link {
   color: #fafafa;
 }
 .reviews__list {
-  width: 100%;
+  width: 78%;
 }
-.reviews__showed {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 40px 0;
+@media (min-width: 1200px) {
+  .reviews__list {
+    width: 78%;
+  }
+}
+@media (min-width: 768px) {
+  .reviews__list {
+    width: 63%;
+  }
+}
+@media (min-width: 768px) {
+  .reviews__showed {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 40px 0;
+  }
+}
+@media (min-width: 320px) {
+  .reviews__showed {
+    width: 100%;
+    margin: 40px 0;
+  }
 }
 .reviews__blockquote {
   width: 480px;
@@ -1835,6 +1853,12 @@ a:link {
   text-align: center;
   background-color: #fafafa;
   font-size: 16px;
+}
+@media (min-width: 320px) {
+  .reviews__blockquote {
+    width: 100%;
+    margin: 40px 0;
+  }
 }
 .reviews__blockquote p {
   margin-bottom: 15px;

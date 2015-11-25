@@ -16,16 +16,35 @@
 
 	&__list{
 
-		width: 100%;
+		width: 78%;
+
+		@media (min-width: 1200px) {
+
+			width: 78%;
+		}
+
+		@media (min-width: 768px) {
+
+			width: 63%;
+		}
 	}
 
 	&__showed{
 
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		margin: 40px 0;
+		@media (min-width: 768px) {
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin: 40px 0;
+		}
+
+		@media (min-width: 320px) {
+
+			width: 100%;
+			margin: 40px 0;
+		}
 	}
 
 	&__blockquote{
@@ -37,6 +56,12 @@
 		text-align: center;
 		background-color: @gray-lighter;
 		font-size: @text-size-p;
+
+		@media (min-width: 320px) {
+
+			width: 100%;
+			margin: 40px 0;
+		}
 
 		& p{
 

@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 	$("#gallery-carousel").owlCarousel({
 		items : 6,
-		itemsCustom : [[300, 1], [768, 6], [1200, 6]],
+		itemsCustom : [[300, 1], [768, 6]],
 		rewindNav : true,
 		scrollPerPage : false,
 		pagination : false,
@@ -50,6 +50,7 @@ $(document).ready(function(){
 
 	$("#reviews-carousel").owlCarousel({
 		items : 1,
+		itemsCustom : [[768, 1]],
 		rewindNav : true,
 		scrollPerPage : false,
 		pagination : false,
