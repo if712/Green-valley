@@ -1737,6 +1737,11 @@ a:link {
   overflow: hidden;
   border: 1px solid #979696;
 }
+@media (max-width: 768px) {
+  .gallery__showed {
+    display: none;
+  }
+}
 .gallery__thumbnails {
   display: -webkit-box;
   display: -webkit-flex;

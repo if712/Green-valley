@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 	$("#gallery-carousel").owlCarousel({
 		items : 6,
-		itemsCustom : [[768, 6], [1200, 6]],
+		itemsCustom : [[300, 1], [768, 6], [1200, 6]],
 		rewindNav : true,
 		scrollPerPage : false,
 		pagination : false,
@@ -44,12 +44,6 @@ $(document).ready(function(){
 		var gallery_main_img = $(this).attr('src');
 		$('#gallery__main-img').attr('src', gallery_main_img);
 	});
-
-
-	$('window').on('resize' function() {
-		alert('go!');
-	});
-
 
 
 	/* reviews-carousel */
@@ -74,7 +68,7 @@ $(document).ready(function(){
 
 
 /*
-	$('window').on('resize' function() {
+	$$(window).resize(function(){
 		var windowWidth = $(window).width();
 		if(windowWidth < 500) {
 			gallery.destroy();
