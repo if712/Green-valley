@@ -5,31 +5,63 @@
 	align-items: center;
 	position: relative;
 	width: 100%;
-	padding: 30px 0;
 	background-color: @blue;
 	background-image: url('/../../img/reviews.jpg');
+
+	@media (min-width: 320px) {
+
+			height: 615px;
+			//padding: 70px 0 50px;
+	}
+
 
 	&__title{
 
 		color: @gray-lighter;
+
+		@media (min-width: 320px) {
+
+			margin-top: 70px;
+			font-family: @serif-caption;
+			font-size: @text-size-h2;
+		}
 	}
+
 
 	&__list{
 
-		width: 78%;
+		@media (min-width: 320px) {
 
-		@media (min-width: 1200px) {
-
-			width: 78%;
+			width: 100%;
+			height: 395px;
+			overflow: hidden;
+			margin-bottom: 40px;
 		}
 
 		@media (min-width: 768px) {
 
 			width: 63%;
 		}
+
+		@media (min-width: 1200px) {
+
+			width: 78%;
+		}
 	}
 
 	&__showed{
+
+		@media (min-width: 320px) {
+
+			width: 100%;
+			height: 340px;
+			margin-top: 55px;
+
+			&:nth-child(2){
+
+				display: none;
+			}
+		}
 
 		@media (min-width: 768px) {
 
@@ -37,72 +69,56 @@
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			margin: 40px 0;
 		}
 
-		@media (min-width: 320px) {
-
-			width: 100%;
-			margin: 40px 0;
-		}
 	}
 
 	&__blockquote{
 
-		width: 480px;
-		height: 280px;
-		margin: 0 15px;
-		padding: 120px 30px 30px 30px;
-		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 40px 25px;
 		background-color: @gray-lighter;
 		font-size: @text-size-p;
+		color: @gray-darker;
 
 		@media (min-width: 320px) {
 
 			width: 100%;
-			margin: 40px 0;
 		}
 
 		& p{
 
+			text-align: center;
 			margin-bottom: 15px;
-		}
-
-		&-footer{
-
-			position: relative;
-			color: @gray-darker;
-
-			&:before{
-
-			    content: none;
-			}
-
-			& a{
-
-				position: absolute;
-				top: -130px;
-				left: 195px;
-				font-size: @text-size-small;
-			}
 		}
 	}
 
 	&__avatar{
 
-		position: absolute;
-		top: -240px;
-		left: 165px;
-		width: 80px;
-		border: 2px solid @gray-lighter;
+		width: 78px;
+		margin-top: -22px;
+		border: 1px solid @gray-lighter;
 	}
 
 	&__name{
 
-		position: absolute;
-		top: -150px;
-		left: 165px;
+		margin-top: 10px;
+		font-family: @fira-sans-medium;
 		font-size: @text-size-small;
+	}
+
+	&__date{
+
+		color: @gray-darker;
+		font-family: @fira-sans-regular;
+		font-size: @text-size-p;
+	}
+
+	&__social{
+
+		margin: 3px 0;
 	}
 
 	&__prev{
@@ -129,7 +145,6 @@
 		transform: rotate(-45deg);
 	}
 }
-
 
 
 .btn-blue{
