@@ -577,7 +577,6 @@ blockquote {
   font-size: 17.5px;
   border-left: 5px solid #fafafa;
 }
-blockquote p:last-child,
 blockquote ul:last-child,
 blockquote ol:last-child {
   margin-bottom: 0;
@@ -1605,6 +1604,9 @@ a:link {
 blockquote {
   border: 0;
 }
+button {
+  padding: 0;
+}
 .page-header {
   width: 100%;
   height: 90px;
@@ -1712,11 +1714,11 @@ blockquote {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 50px;
 }
 .gallery__inner {
   position: relative;
   overflow: hidden;
-  margin-bottom: 2.6%;
   /*@media (min-width: 992px) {
 	    	width: 970px;
 		}
@@ -1802,10 +1804,13 @@ blockquote {
   width: 100%;
   background-color: #0ab89d;
   background-image: url('../img/reviews.jpg');
+  background-repeat: no-repeat;
 }
 @media (min-width: 320px) {
   .reviews {
     height: 615px;
+    background-image: url('../img/reviews-320.jpg');
+    background-position: center center;
   }
 }
 .reviews__title {
@@ -1821,8 +1826,9 @@ blockquote {
 @media (min-width: 320px) {
   .reviews__list {
     width: 100%;
-    height: 395px;
+    height: 371px;
     overflow: hidden;
+    margin-top: 30px;
     margin-bottom: 40px;
   }
 }
@@ -1839,11 +1845,8 @@ blockquote {
 @media (min-width: 320px) {
   .reviews__showed {
     width: 100%;
-    height: 340px;
-    margin-top: 55px;
-  }
-  .reviews__showed:nth-child(2) {
-    display: none;
+    height: 345px;
+    margin-top: 26px;
   }
 }
 @media (min-width: 768px) {
@@ -1881,7 +1884,7 @@ blockquote {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 40px 25px;
+  padding: 0 40px 0;
   background-color: #fafafa;
   font-size: 16px;
   color: #191919;
@@ -1889,23 +1892,27 @@ blockquote {
 @media (min-width: 320px) {
   .reviews__blockquote {
     width: 100%;
+    height: 355px;
   }
 }
 .reviews__blockquote p {
   text-align: center;
-  margin-bottom: 15px;
 }
 .reviews__avatar {
   width: 78px;
-  margin-top: -22px;
+  margin-top: -25px;
+  margin-bottom: 8px;
   border: 1px solid #fafafa;
 }
 .reviews__name {
-  margin-top: 10px;
   font-family: 'Fira Sans Medium';
   font-size: 14px;
 }
+.reviews__text {
+  margin-bottom: 16px;
+}
 .reviews__date {
+  margin-bottom: 30px;
   color: #191919;
   font-family: 'Fira Sans Regular';
   font-size: 16px;
@@ -1925,6 +1932,11 @@ blockquote {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+@media (min-width: 320px) {
+  .reviews__prev {
+    display: none;
+  }
+}
 .reviews__next {
   position: absolute;
   top: 50%;
@@ -1937,11 +1949,16 @@ blockquote {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+@media (min-width: 320px) {
+  .reviews__next {
+    display: none;
+  }
+}
 .btn-blue {
-  width: 200px;
-  padding: 10px 15px 10px 35px;
+  width: 140px;
+  height: 30px;
   background-color: #0ab89d;
-  border: 1px solid #fafafa;
+  border: 2px solid #fafafa;
   border-radius: 70px;
   color: #fafafa;
 }
@@ -2040,6 +2057,7 @@ blockquote {
   width: 100%;
   height: 340px;
   background: url('../img/healthy-holidays.jpg') no-repeat;
+  background-position: center center;
 }
 .healthy-holidays__inner {
   display: -webkit-box;
@@ -2208,3 +2226,5 @@ blockquote {
   min-height: 150px;
   background: url(AjaxLoader.gif) no-repeat center center;
 }
+
+/*# sourceMappingURL=styles.css.map */
