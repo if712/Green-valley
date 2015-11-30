@@ -1,0 +1,23 @@
+{
+  "name": "green-valley",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "if712 <if712@ya.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/if712/green",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.3",
+    "modernizr": "~3.2.0"
+  }
+}

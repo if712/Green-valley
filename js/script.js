@@ -67,6 +67,18 @@ $(document).ready(function(){
 	});
 
 
+	/* discount-carousel */
+
+	$("#discount-carousel").owlCarousel({
+		items : 1,
+		itemsCustom : [[768, 1]],
+		rewindNav : false,
+		scrollPerPage : false,
+		pagination : true,
+	});
+
+
+
 
 /*
 	$$(window).resize(function(){
