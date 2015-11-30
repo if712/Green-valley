@@ -1,19 +1,30 @@
 $(document).ready(function(){
 
-	$(".promo-slider__paginator-item1").click(function(){
-		var paginatorId = $(this).attr("id");
-		$(".promo-slider__paginator-item2").attr("id", "");
-		$(this).attr("id", "paginator-item-shown");
-		$("#promo-slider__corporate").css("display", "none");
-		$("#promo-slider__family").css("display", "block");
+
+	/* promo-slider-carousel */
+
+	$("#promo-slider-carousel").owlCarousel({
+		items : 1,
+		itemsCustom : [[768, 1]],
+		//navigation: true,
+		//navigationText: ["Семейный отдых","Корпоративный"],
+		rewindNav : false,
+		scrollPerPage : false,
+		pagination : false,
 	});
 
-	$(".promo-slider__paginator-item2").click(function(){
-		var paginatorId = $(this).attr("id");
-		$(".promo-slider__paginator-item1").attr("id", "");
-		$(this).attr("id", "paginator-item-shown");
-		$("#promo-slider__family").css("display", "none");
-		$("#promo-slider__corporate").css("display", "block");
+	var promoSlider = $("#promo-slider-carousel").data('owlCarousel');
+
+	$('.promo-slider__prev').click(function(){
+	  promoSlider.prev();
+	  $(this).css("color", "#ff7435");
+	  $('.promo-slider__next').css("color", "#979696");
+	});
+
+	$('.promo-slider__next').click(function(){
+	  promoSlider.next();
+	  $(this).css("color", "#ff7435");
+	  $('.promo-slider__prev').css("color", "#979696");
 	});
 
 
@@ -23,7 +34,7 @@ $(document).ready(function(){
 	$("#gallery-carousel").owlCarousel({
 		items : 6,
 		itemsCustom : [[300, 1], [768, 6]],
-		rewindNav : true,
+		rewindNav : false,
 		scrollPerPage : false,
 		pagination : false,
 	});
@@ -51,7 +62,7 @@ $(document).ready(function(){
 	$("#reviews-carousel").owlCarousel({
 		items : 1,
 		itemsCustom : [[768, 1]],
-		rewindNav : true,
+		rewindNav : false,
 		scrollPerPage : false,
 		pagination : false,
 	});

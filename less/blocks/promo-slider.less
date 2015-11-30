@@ -1,5 +1,11 @@
 .promo-slider{
 
+	@media (min-width: 320px){
+
+		width: 100%;
+		height: 375px;
+	}
+
 	&__wrapper{
 
 		width: 100%;
@@ -8,15 +14,14 @@
 
 	&__item{
 
-		display: none;
 		position: relative;
 		width: 100%;
 		height: 320px;
 
-		&-img{
+		@media (min-width: 320px){
 
-			width: 1042px;
-			height: 320px;
+			background: url('/../../img/promo-slider-320.jpg') no-repeat;
+			background-position: left top;
 		}
 
 		&-text{
@@ -55,58 +60,42 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
+	}
 
-		&-item1,
-		&-item2{
+	&__prev,
+	&__next{
 
-			position: relative;
-			margin: 16px 8px;
-			font-size: @text-size-small;
-			font-family: @fira-sans-regular;
-			color: @gray;
-			text-transform: uppercase;
-			cursor: pointer;
+		position: relative;
+		margin: 16px 8px;
+		font-size: @text-size-small;
+		font-family: @fira-sans-regular;
+		-color: @gray;
+		text-transform: uppercase;
+		cursor: pointer;
 
-			&:hover{
+		&:hover{
 
-				font-family: @sans-caption;
-				color: @orange;
-			}
-
-			&:active span{
-
-				border-bottom: 2px solid @orange;
-			}
-
-			& span{
-
-				position: absolute;
-				top: 23px;
-				left: 39%;
-				width: 22%;
-			}
-
+			font-family: @sans-caption;
+			color: @orange;
 		}
 
+		&:hover span{
+
+			border-bottom: 2px solid @orange;
+		}
+
+		&:active span{
+
+			border-bottom: 2px solid @orange;
+		}
+
+		& span{
+
+			position: absolute;
+			top: 23px;
+			left: 39%;
+			width: 22%;
+		}
 	}
 
 }
-
-
-#paginator-item-shown{
-
-	font-family: @sans-caption;
-	color: @orange;
-
-	& span{
-
-		border-bottom: 2px solid @orange;
-	}
-}
-
-#promo-slider__family {
-
-	display: block;
-}
-
-
