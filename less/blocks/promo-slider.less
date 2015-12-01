@@ -44,13 +44,17 @@
 			& h1{
 
 				font-size: @text-size-accent;
-				font-family: @serif-caption;
+				font-family: 'PT Serif Caption', serif;
+				font-weight: 400;
+				font-style: normal;
 			}
 
 			& p{
 
 				font-size: @text-size-p;
-				font-family: @fira-sans-regular;
+				font-family: 'Fira Sans', sans-serif;
+				font-weight: 400;
+				font-style: normal;
 			}
 		}
 	}
@@ -68,22 +72,22 @@
 		position: relative;
 		margin: 16px 8px;
 		font-size: @text-size-small;
-		font-family: @fira-sans-regular;
-		-color: @gray;
+		font-family: 'Fira Sans', sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		color: @gray;
 		text-transform: uppercase;
 		cursor: pointer;
 
 		&:hover{
 
-			font-family: @sans-caption;
+			font-family: 'PT Sans Caption', sans-serif;
+			font-weight: 700;
+			font-style: normal;
 			color: @orange;
 		}
 
-		&:hover span{
-
-			border-bottom: 2px solid @orange;
-		}
-
+		&:hover span,
 		&:active span{
 
 			border-bottom: 2px solid @orange;

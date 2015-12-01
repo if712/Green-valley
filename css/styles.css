@@ -1,4 +1,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:700,400&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1560,6 +1563,8 @@ address {
     display: none !important;
   }
 }
+/* Шрифты */
+/* Слайдер */
 /*
  * 	Core Owl Carousel CSS File
  *	v1.3.3
@@ -1662,7 +1667,7 @@ address {
   display: block;
   width: 14px;
   height: 14px;
-  margin: 5px 7px;
+  margin: 20px 10px;
   filter: alpha(opacity=50);
   /*IE7 fix*/
   border-radius: 20px;
@@ -1688,25 +1693,9 @@ address {
   min-height: 150px;
   background: url(AjaxLoader.gif) no-repeat center center;
 }
-@font-face {
-  font-family: 'PT Serif Caption';
-  src: url(../../fonts/PTSerifCaption/ptSerifCaption.ttf);
-}
-@font-face {
-  font-family: 'Fira Sans Regular';
-  src: url(../../fonts/FiraSans/FiraSans-Regular.ttf);
-}
-@font-face {
-  font-family: 'Fira Sans Medium';
-  src: url(../../fonts/FiraSans/FiraSans-Medium.ttf);
-}
-@font-face {
-  font-family: 'PT Sans Caption Bold';
-  src: url(../../fonts/PTSansCaption/ptSansCaptionBold.ttf);
-}
+/* Стили LESS*/
 body {
   width: 100%;
-  font-style: sans-serif;
 }
 img {
   width: 100%;
@@ -1946,7 +1935,9 @@ button {
 @media (min-width: 320px) {
   .reviews__title {
     margin-top: 70px;
-    font-family: 'PT Serif Caption';
+    font-family: 'PT Serif Caption', serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 26px;
   }
 }
@@ -2027,7 +2018,9 @@ button {
   border: 1px solid #fafafa;
 }
 .reviews__name {
-  font-family: 'Fira Sans Medium';
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 14px;
 }
 .reviews__text {
@@ -2036,7 +2029,9 @@ button {
 .reviews__date {
   margin-bottom: 30px;
   color: #191919;
-  font-family: 'Fira Sans Regular';
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 16px;
 }
 .reviews__social {
@@ -2121,11 +2116,15 @@ button {
 }
 .promo-slider__item-text h1 {
   font-size: 18px;
-  font-family: 'PT Serif Caption';
+  font-family: 'PT Serif Caption', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .promo-slider__item-text p {
   font-size: 16px;
-  font-family: 'Fira Sans Regular';
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .promo-slider__paginator {
   display: -webkit-box;
@@ -2143,20 +2142,22 @@ button {
   position: relative;
   margin: 16px 8px;
   font-size: 14px;
-  font-family: 'Fira Sans Regular';
-  -color: #979696;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #979696;
   text-transform: uppercase;
   cursor: pointer;
 }
 .promo-slider__prev:hover,
 .promo-slider__next:hover {
-  font-family: 'PT Sans Caption Bold';
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: #ff7435;
 }
 .promo-slider__prev:hover span,
-.promo-slider__next:hover span {
-  border-bottom: 2px solid #ff7435;
-}
+.promo-slider__next:hover span,
 .promo-slider__prev:active span,
 .promo-slider__next:active span {
   border-bottom: 2px solid #ff7435;
@@ -2206,12 +2207,16 @@ button {
 .healthy-holidays__title {
   width: 60%;
   margin: 40px 0 30px 0;
+  font-family: 'PT Serif Caption', serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 26px;
-  font-family: 'PT Serif Caption';
 }
 .healthy-holidays__text {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 16px;
-  font-family: 'Fira Sans Medium';
 }
 .healthy-holidays__text-hidden {
   display: none;
@@ -2234,6 +2239,7 @@ button {
     width: 100%;
     height: 475px;
     padding-top: 50px;
+    margin-bottom: 70px;
   }
 }
 @media (min-width: 320px) {
@@ -2241,7 +2247,9 @@ button {
     width: 72%;
     text-align: center;
     margin-bottom: 35px;
-    font-family: 'PT Serif Caption';
+    font-family: 'PT Serif Caption', serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 26px;
   }
 }
@@ -2264,7 +2272,7 @@ button {
 .discount__item-textarea {
   position: absolute;
   bottom: 20px;
-  width: 300px;
+  width: 295px;
   height: 115px;
   padding: 20px;
   background: #fff;
@@ -2272,15 +2280,129 @@ button {
 }
 .discount__item-textarea-title {
   margin-bottom: 7px;
-  font-family: 'Fira Sans Medium';
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 18px;
   color: #ff7435;
   text-transform: uppercase;
 }
 .discount__item-textarea p {
-  font-family: 'Fira Sans Regular';
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 16px;
   line-height: 1.2;
+}
+@media (min-width: 320px) {
+  .location {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .location__title {
+    width: 50%;
+    margin-bottom: 35px;
+    font-family: 'PT Serif Caption', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    text-align: center;
+  }
+}
+@media (min-width: 320px) {
+  .location__map {
+    width: 100%;
+    height: 400px;
+  }
+}
+.location__transport {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 320px) {
+  .location__transport {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 0 40px 55px;
+  }
+}
+.location__buses,
+.location__electric {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 320px) {
+  .location__buses,
+  .location__electric {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+.location__buses-title,
+.location__electric-title {
+  padding: 15px 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.location__buses-item,
+.location__electric-item {
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+.location__buses-item span,
+.location__electric-item span {
+  font-weight: 500;
+}
+.location__buses-img {
+  width: 60px;
+  height: 30px;
+  background: url('../img/bus.jpg') no-repeat;
+}
+.location__electric-img {
+  width: 60px;
+  height: 26px;
+  background: url('../img/electric.jpg') no-repeat;
 }
 
 /*# sourceMappingURL=styles.css.map */

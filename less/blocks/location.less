@@ -1,0 +1,98 @@
+.location{
+
+	@media (min-width: 320px){
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__title{
+
+		@media (min-width: 320px){
+
+			width: 50%;
+			margin-bottom: 35px;
+			font-family: 'PT Serif Caption', serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: @text-size-h2;
+			text-align: center;
+		}
+	}
+
+	&__map{
+
+		@media (min-width: 320px){
+
+			width: 100%;
+			height: 400px;
+		}
+	}
+
+	&__transport{
+
+		display: flex;
+
+		@media (min-width: 320px){
+
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			padding: 0 40px 55px;
+		}
+	}
+
+	&__buses,
+	&__electric{
+
+		margin-top: 40px;
+		display: flex;
+
+		@media (min-width: 320px){
+
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+
+		&-title{
+
+			padding: 15px 0;
+			font-family: 'Fira Sans', sans-serif;
+			font-weight: 500;
+			font-style: normal;
+			font-size: @text-size-small;
+			text-transform: uppercase;
+		}
+
+		&-item{
+
+			text-align: center;
+			font-family: 'Fira Sans', sans-serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: @text-size-p;
+
+			& span{
+
+				font-weight: 500;
+			}
+		}
+	}
+
+	&__buses-img{
+
+		width: 60px;
+		height: 30px;
+		background: url('/../../img/bus.jpg') no-repeat;
+	}
+
+	&__electric-img{
+
+		width: 60px;
+		height: 26px;
+		background: url('/../../img/electric.jpg') no-repeat;
+	}
+}
