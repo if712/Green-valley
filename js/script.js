@@ -9,7 +9,6 @@ $(document).ready(function(){
 		//navigation: true,
 		//navigationText: ["Семейный отдых","Корпоративный"],
 		rewindNav : false,
-		scrollPerPage : false,
 		pagination : false,
 	});
 
@@ -35,7 +34,7 @@ $(document).ready(function(){
 		items : 6,
 		itemsCustom : [[300, 1], [768, 6]],
 		rewindNav : false,
-		scrollPerPage : false,
+		scrollPerPage : true,
 		pagination : false,
 	});
 
@@ -60,14 +59,14 @@ $(document).ready(function(){
 	/* reviews-carousel */
 
 	$("#reviews-carousel").owlCarousel({
-		items : 1,
+		items : 2,
 		itemsCustom : [[768, 1]],
 		rewindNav : false,
-		scrollPerPage : false,
 		pagination : false,
 	});
 
 	var owl = $("#reviews-carousel").data('owlCarousel');
+	var carousel = $("#reviews-carousel");
 
 	$('.reviews__prev').click(function(){
 	  owl.prev();
@@ -84,7 +83,6 @@ $(document).ready(function(){
 		items : 1,
 		itemsCustom : [[768, 1]],
 		rewindNav : false,
-		scrollPerPage : false,
 		pagination : true,
 	});
 

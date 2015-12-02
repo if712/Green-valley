@@ -1,0 +1,36 @@
+.recomendation{
+
+	padding: 50px 10px;
+	background: @blue;
+
+	&__title{
+
+		margin-bottom: 30px;
+		text-align: center;
+		font-family: 'PT Serif Caption', serif;
+		font-weight: 400;
+		color: @gray-lighter;
+
+		@media (min-width: 320px){
+
+			font-size: @text-size-h2;
+			line-height: 1.4;
+		}
+
+		@media (min-width: 768px){
+
+			font-size: @text-size-h2-big;
+		}
+	}
+
+	&__list{
+
+		@media (min-width: 768px){
+
+			display: flex;
+			//flex-direction: column;
+			//align-items: center;
+			justify-content: center;
+		}
+	}
+}
