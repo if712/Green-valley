@@ -26,6 +26,10 @@ $(document).ready(function(){
 	  $('.promo-slider__prev').css("color", "#979696");
 	});
 
+	$('.promo-slider__prev, .promo-slider__next').hover(function(){
+		$(this).css("color", "#ff7435");
+	});
+
 
 
 	/* gallery-carousel */

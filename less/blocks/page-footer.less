@@ -1,0 +1,44 @@
+.page-footer{
+
+	height: 130px;
+	padding: 0 20px;
+
+	@media (min-width: 320px){
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@media (min-width: 768px){
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__adress,
+	&__contacts{
+
+		font-family: 'Fira Sans', sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: @text-size-small;
+
+		@media (min-width: 320px){
+
+			display: none;
+		}
+
+		@media (min-width: 768px){
+
+			display: block;
+			width: 140px;
+		}
+	}
+
+	&__social-logo{
+
+		width: 145px;
+	}
+}

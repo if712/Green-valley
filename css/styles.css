@@ -207,11 +207,6 @@ button {
   width: 100%;
   margin-left: 30px;
 }
-.page-header__logo-text {
-  color: #0ab89d;
-  font-size: 15px;
-  text-transform: uppercase;
-}
 .page-header__burger {
   right: 20px;
   width: 30px;
@@ -270,6 +265,27 @@ button {
 		}
 	}
 }*/
+.main-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 145px;
+  color: #0ab89d;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.main-logo span {
+  text-align: center;
+}
 .gallery {
   width: 100%;
   height: 100%;
@@ -388,6 +404,7 @@ button {
     font-weight: 400;
     font-style: normal;
     font-size: 26px;
+    letter-spacing: 0.03em;
   }
 }
 @media (min-width: 320px) {
@@ -507,6 +524,7 @@ button {
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
+  letter-spacing: 0.02em;
 }
 .reviews__text {
   margin: 0 40px 20px;
@@ -521,8 +539,9 @@ button {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1,1;
+  letter-spacing: 0.02em;
 }
 .reviews__social {
   margin: 10px 0;
@@ -563,60 +582,98 @@ button {
 }
 .btn-blue {
   width: 140px;
-  height: 30px;
+  padding: 7px;
   margin: 35px 0 45px;
   background-color: #0ab89d;
   border: 2px solid #fafafa;
   border-radius: 70px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: #fafafa;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 .promo-slider {
   width: 100%;
 }
-@media (min-width: 320px) {
-  .promo-slider {
-    height: 375px;
-  }
-}
 .promo-slider__wrapper {
   width: 100%;
-  height: 320px;
 }
 .promo-slider__item {
-  position: relative;
   width: 100%;
-  height: 320px;
+  padding-top: 18px;
+  background: url('../img/promo-slider.jpg') no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
 }
 @media (min-width: 320px) {
   .promo-slider__item {
-    background: url('../img/promo-slider-320.jpg') no-repeat;
-    background-position: left top;
+    height: 320px;
   }
 }
+@media (min-width: 1200px) {
+  .promo-slider__item {
+    height: 430px;
+  }
+}
+.promo-slider__item-title,
 .promo-slider__item-text {
-  position: absolute;
-  top: 18px;
-  height: 140px;
-  padding: 0 20px;
+  padding: 0 18px;
+  line-height: 1.4;
+}
+@media (min-width: 320px) {
+  .promo-slider__item-title,
+  .promo-slider__item-text {
+    text-align: center;
+    background: #fafafa;
+  }
+}
+@media (min-width: 768px) {
+  .promo-slider__item-title,
+  .promo-slider__item-text {
+    text-align: left;
+    background: none;
+  }
+}
+.promo-slider__item-title span,
+.promo-slider__item-text span {
+  padding: 0 8px;
   background: #fafafa;
 }
-.promo-slider__item-text h1,
-.promo-slider__item-text p {
-  text-align: center;
-  margin: 6px 0;
-  line-height: 1.5;
-}
-.promo-slider__item-text h1 {
-  font-size: 18px;
+.promo-slider__item-title {
   font-family: 'PT Serif Caption', serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.04em;
 }
-.promo-slider__item-text p {
-  font-size: 16px;
+@media (min-width: 320px) {
+  .promo-slider__item-title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .promo-slider__item-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+}
+.promo-slider__item-text {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+@media (min-width: 320px) {
+  .promo-slider__item-text {
+    margin-top: -2px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .promo-slider__item-text {
+    font-size: 18px;
+  }
 }
 .promo-slider__paginator {
   display: -webkit-box;
@@ -632,7 +689,7 @@ button {
 .promo-slider__prev,
 .promo-slider__next {
   position: relative;
-  margin: 16px 8px;
+  margin: 18px 8px;
   font-size: 14px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
@@ -640,12 +697,10 @@ button {
   color: #979696;
   text-transform: uppercase;
   cursor: pointer;
+  letter-spacing: 0.02em;
 }
 .promo-slider__prev:hover,
 .promo-slider__next:hover {
-  font-family: 'PT Sans Caption', sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #ff7435;
 }
 .promo-slider__prev:hover span,
@@ -661,6 +716,9 @@ button {
   left: 39%;
   width: 22%;
 }
+.promo-slider__prev {
+  color: #ff7435;
+}
 .healthy-holidays {
   display: -webkit-box;
   display: -webkit-flex;
@@ -671,9 +729,21 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 340px;
-  background: url('../img/healthy-holidays.jpg') no-repeat;
-  background-position: center center;
+}
+@media (min-width: 320px) {
+  .healthy-holidays {
+    height: 340px;
+  }
+}
+@media (min-width: 768px) {
+  .healthy-holidays {
+    height: 510px;
+  }
+}
+@media (min-width: 1200px) {
+  .healthy-holidays {
+    height: 440px;
+  }
 }
 .healthy-holidays__inner {
   display: -webkit-box;
@@ -689,20 +759,32 @@ button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 78%;
+  background: url('../img/healthy-holidays.jpg') no-repeat;
+  background-position: top center;
+}
+@media (min-width: 320px) {
+  .healthy-holidays__inner {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .healthy-holidays__inner {
+    width: 850px;
+  }
 }
 .healthy-holidays__title,
 .healthy-holidays__text {
   text-align: center;
-  color: #1c1c1c;
+  color: #191919;
 }
 .healthy-holidays__title {
   width: 60%;
-  margin: 40px 0 30px 0;
+  margin: 37px 0 30px 0;
   font-family: 'PT Serif Caption', serif;
   font-weight: 400;
   font-style: normal;
   font-size: 26px;
+  letter-spacing: 0.03em;
 }
 .healthy-holidays__text {
   font-family: 'Fira Sans', sans-serif;
@@ -710,8 +792,79 @@ button {
   font-style: normal;
   font-size: 16px;
 }
-.healthy-holidays__text-hidden {
-  display: none;
+@media (min-width: 320px) {
+  .healthy-holidays__text {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .healthy-holidays__text {
+    width: 570px;
+  }
+}
+@media (min-width: 320px) {
+  .healthy-holidays__text-hidden {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .healthy-holidays__text-hidden {
+    display: block;
+  }
+}
+.healthy-holidays__list {
+  margin: 35px 0 0 0;
+}
+@media (min-width: 320px) {
+  .healthy-holidays__list {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .healthy-holidays__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 520px;
+  }
+}
+@media (min-width: 1200px) {
+  .healthy-holidays__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+}
+.healthy-holidays__item {
+  width: 80px;
+  margin: 0 25px;
+  text-align: center;
+}
+.healthy-holidays__link {
+  padding-top: 100px;
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  color: #191919;
 }
 .discount {
   display: -webkit-box;
@@ -731,14 +884,20 @@ button {
 }
 @media (min-width: 320px) {
   .discount {
-    height: 555px;
-    padding: 50px 0 70px;
+    height: 540px;
+    padding: 50px 0 60px;
+  }
+}
+@media (min-width: 768px) {
+  .discount {
+    height: 485px;
+    padding: 40px 0 40px;
   }
 }
 @media (min-width: 1200px) {
   .discount {
-    height: 590px;
-    padding: 50px 110px 95px;
+    height: 585px;
+    padding: 45px 110px 85px;
   }
 }
 @media (min-width: 320px) {
@@ -750,6 +909,7 @@ button {
     font-weight: 400;
     font-style: normal;
     font-size: 26px;
+    letter-spacing: 0.06em;
   }
 }
 @media (min-width: 320px) {
@@ -837,6 +997,7 @@ button {
     font-style: normal;
     font-size: 26px;
     text-align: center;
+    letter-spacing: 0.05em;
   }
 }
 @media (min-width: 320px) {
@@ -887,7 +1048,7 @@ button {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    width: 90%;
   }
 }
 .location__buses-title,
@@ -931,6 +1092,7 @@ button {
   font-family: 'PT Serif Caption', serif;
   font-weight: 400;
   color: #fafafa;
+  letter-spacing: 0.06em;
 }
 @media (min-width: 320px) {
   .recomendation__title {
@@ -956,7 +1118,6 @@ button {
   }
 }
 .offer {
-  width: 100%;
   margin: 20px 10px 0;
 }
 .offer__link {
@@ -1003,6 +1164,75 @@ button {
 }
 .offer__price span {
   color: #ff7435;
+}
+.page-footer {
+  height: 130px;
+  padding: 0 20px;
+}
+@media (min-width: 320px) {
+  .page-footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.page-footer__adress,
+.page-footer__contacts {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+@media (min-width: 320px) {
+  .page-footer__adress,
+  .page-footer__contacts {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer__adress,
+  .page-footer__contacts {
+    display: block;
+    width: 140px;
+  }
+}
+.page-footer__social-logo {
+  width: 145px;
+}
+.social-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /*# sourceMappingURL=styles.css.map */
