@@ -16,7 +16,7 @@
 
 			width: 50%;
 			margin-bottom: 35px;
-			font-family: 'PT Serif Caption', serif;
+			font-family: @serif-caption;
 			font-weight: 400;
 			font-style: normal;
 			font-size: @text-size-h2;
@@ -46,6 +46,15 @@
 			width: 100%;
 			padding: 0 40px 55px;
 		}
+
+		@media (min-width: 1200px){
+
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: 0 40px 55px;
+		}
 	}
 
 	&__buses,
@@ -64,20 +73,32 @@
 		&-title{
 
 			padding: 15px 0;
-			font-family: 'Fira Sans', sans-serif;
+			font-family: @fira-sans;
 			font-weight: 500;
 			font-style: normal;
 			font-size: @text-size-small;
 			text-transform: uppercase;
 		}
 
+		&-list{
+
+			@media (min-width: 1200px){
+
+				width: 78%;
+			}
+		}
+
 		&-item{
 
-			text-align: center;
-			font-family: 'Fira Sans', sans-serif;
+			font-family: @fira-sans;
 			font-weight: 400;
 			font-style: normal;
 			font-size: @text-size-p;
+
+			@media (max-width: 1199px){
+
+				text-align: center;
+			}
 
 			& span{
 

@@ -1,0 +1,32 @@
+/*.btn{
+
+	width: 180px;
+	height: 35px;
+	margin: 0 32px;
+	border-radius: 70px;
+	color: @gray-lighter;
+	font-family: @fira-sans;
+	font-size: @text-size-small;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	border: none;
+
+	@media (max-width: 1200px) {
+
+		display: none;
+	}
+
+	&--orange{
+
+		background-color: @orange;
+
+	}
+
+	& img{
+
+		width: 13px;
+		height: 14px;
+	}
+}*/

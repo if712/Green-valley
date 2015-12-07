@@ -1,0 +1,42 @@
+.btn{
+
+	height: 35px;
+	border-radius: 70px;
+	color: @gray-lighter;
+	font-family: @fira-sans;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	border: none;
+
+	@media (min-width: 320px) {
+
+		display: none;
+	}
+
+	@media (min-width: 1200px) {
+
+		width: 170px;
+		display: block;
+		margin-left: 2%;
+	}
+
+	@media (min-width: 1400px) {
+
+		width: 180px;
+		margin: 0 2.27%;
+	}
+
+	&--orange{
+
+		background-color: @orange;
+	}
+
+	& img{
+
+		width: 13px;
+		height: 14px;
+		margin: 0 6px -2px 0;
+	}
+}

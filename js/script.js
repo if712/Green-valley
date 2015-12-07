@@ -1,35 +1,43 @@
 $(document).ready(function(){
 
 
-	/* promo-slider-carousel */
-
-	$("#promo-slider-carousel").owlCarousel({
-		items : 1,
-		itemsCustom : [[768, 1]],
-		//navigation: true,
-		//navigationText: ["Семейный отдых","Корпоративный"],
-		rewindNav : false,
-		pagination : false,
+	$('#burger').on('click', function(e){
+		e.preventDefault();
+		$('.page-header__nav').slideToggle();
 	});
 
-	var promoSlider = $("#promo-slider-carousel").data('owlCarousel');
 
-	$('.promo-slider__prev').click(function(){
-	  promoSlider.prev();
-	  $(this).css("color", "#ff7435");
-	  $('.promo-slider__next').css("color", "#979696");
-	});
+	/* promo-slider */
 
-	$('.promo-slider__next').click(function(){
-	  promoSlider.next();
-	  $(this).css("color", "#ff7435");
-	  $('.promo-slider__prev').css("color", "#979696");
-	});
+	var links = document.querySelectorAll(".promo-slider__paginator-item a");
+	var slides = document.querySelectorAll(".promo-slider__item");
 
-	$('.promo-slider__prev, .promo-slider__next').hover(function(){
-		$(this).css("color", "#ff7435");
-	});
+	function changeTab(e){
 
+	  e.preventDefault();
+
+	  for (var i=0, j=links.length; i<j; i++) {
+
+	    links[i].parentNode.classList.remove("promo-slider__paginator-item--active");
+		}
+
+	  this.parentNode.classList.add("promo-slider__paginator-item--active");
+	  var link = this.getAttribute("href");
+	  var linkSlide = document.querySelector(link);
+
+    for (i=0, j=slides.length; i<j; i++) {
+
+		  slides[i].classList.remove("promo-slider__item--active");
+		}
+
+	  linkSlide.classList.add("promo-slider__item--active");
+	}
+
+
+	for (var i=0, j=links.length; i<j; i++) {
+
+	  links[i].addEventListener("click", changeTab);
+	}
 
 
 	/* gallery-carousel */
@@ -42,7 +50,6 @@ $(document).ready(function(){
 		pagination : false,
 	});
 
-
 	var gallery = $('#gallery-carousel').data('owlCarousel');
 
 	$('.gallery__prev').click(function(){
@@ -53,8 +60,7 @@ $(document).ready(function(){
 		gallery.next();
 	});
 
-
-	$("#gallery-carousel img").click(function(){
+	$("#gallery-carousel img").click(function(e){
 		var gallery_main_img = $(this).attr('src');
 		$('#gallery__main-img').attr('src', gallery_main_img);
 	});

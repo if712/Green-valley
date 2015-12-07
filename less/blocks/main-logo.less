@@ -1,19 +1,29 @@
 .main-logo{
 
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	width: 145px;
 	color: @blue;
 	font-size: 15px;
-	font-family: 'PT Serif', serif;
+	font-family: @serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: @text-size-logo;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.05em;
 
 	& span{
 
 		text-align: center;
+	}
+
+	& img{
+
+		position: absolute;
+		top: -18px;
+    left: 48px;
+		width: 44px;
+		height: 49px;
 	}
 }
