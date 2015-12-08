@@ -1,31 +1,35 @@
 .btn{
 
-	height: 35px;
+	height: 37px;
 	border-radius: 70px;
 	color: @gray-lighter;
 	font-family: @fira-sans;
 	font-style: normal;
 	font-weight: 400;
+	font-size: @text-size-small;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
 	border: none;
+	background: url('/../../img/btn.jpg') no-repeat;
+	background-position: 20px 10px;
+	padding-left: 20px;
 
 	@media (min-width: 320px) {
 
-		display: none;
+		display: block;
+		width: 180px;
+		height: 35px;
+		letter-spacing: 0.02em;
 	}
 
 	@media (min-width: 1200px) {
 
-		width: 170px;
-		display: block;
-		margin-left: 2%;
+		//
 	}
 
 	@media (min-width: 1400px) {
 
-		width: 180px;
-		margin: 0 2.27%;
+		//
 	}
 
 	&--orange{
@@ -38,5 +42,13 @@
 		width: 13px;
 		height: 14px;
 		margin: 0 6px -2px 0;
+	}
+}
+
+.page-header .btn{
+
+	@media (max-width: 1199px) {
+
+		display: none;
 	}
 }

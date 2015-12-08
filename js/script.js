@@ -87,6 +87,8 @@ $(document).ready(function(){
 	});
 
 
+
+
 	/* discount-carousel */
 
 	$("#discount-carousel").owlCarousel({
@@ -99,8 +101,68 @@ $(document).ready(function(){
 
 
 
+	/* rooms-carousel */
+
+	var windowWidth = window.innerWidth;
+	var roomsList = document.querySelector(".rooms__list");
+
+
+
+	function roomsCarousel (){
+
+		if((windowWidth >= 768) && (windowWidth < 1200)){
+
+			//roomsList.classList.add("rooms-carousel");
+
+			$("#rooms-carousel").owlCarousel({
+				items : 2,
+				itemsCustom : [[768, 2]],
+				rewindNav : false,
+				pagination : true,
+			});
+		}
+	}
+
+	roomsCarousel();
+
+
+
+	//var rooms = $('.rooms-carousel').data('owlCarousel');
+	var attrr = $(".rooms__list").attr("id");
+	window.alert(attrr);
+
+
+	$(window).resize(function(){
+
+		var windowResizeWidth = $(window).width();
+
+		if((windowResizeWidth >= 768) && (windowResizeWidth < 1200)){
+
+												console.log('add' + ' ' + windowResizeWidth);
+
+			$(".rooms-carousel").owlCarousel({
+				items : 2,
+				itemsCustom : [[768, 2]],
+				rewindNav : false,
+				pagination : true,
+			});
+		}
+
+
+		else if(((windowResizeWidth < 767) || (windowResizeWidth > 1199)) && (attrr == "rooms-carousel")){
+
+											console.log('remove' + ' ' + windowResizeWidth);
+
+			//$(".rooms-carousel").data('owlCarousel').destroy();
+
+			$(".rooms__list").attr("id", "");
+		}
+
+	});
+
+
 /*
-	$$(window).resize(function(){
+	$(window).resize(function(){
 		var windowWidth = $(window).width();
 		if(windowWidth < 500) {
 			gallery.destroy();
@@ -115,7 +177,9 @@ $(document).ready(function(){
 		}
 	});
 */
+
 });
+
 /*
 
 	$('#burger').on('click', function(e){
