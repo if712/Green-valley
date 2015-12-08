@@ -103,16 +103,16 @@ $(document).ready(function(){
 
 	/* rooms-carousel */
 
+
+	/* добавление карусели при размере окна от 768px до 1200px */
+
 	var windowWidth = window.innerWidth;
-	var roomsList = document.querySelector(".rooms__list");
-
-
 
 	function roomsCarousel (){
 
 		if((windowWidth >= 768) && (windowWidth < 1200)){
 
-			//roomsList.classList.add("rooms-carousel");
+			$(".rooms__list").attr("id","rooms-carousel");
 
 			$("#rooms-carousel").owlCarousel({
 				items : 2,
@@ -126,21 +126,18 @@ $(document).ready(function(){
 	roomsCarousel();
 
 
-
-	//var rooms = $('.rooms-carousel').data('owlCarousel');
-	var attrr = $(".rooms__list").attr("id");
-	window.alert(attrr);
-
+/* добавление и удаление карусели при изменении размера окна */
 
 	$(window).resize(function(){
 
 		var windowResizeWidth = $(window).width();
+		var roomsId = $(".rooms__list").attr("id");
 
-		if((windowResizeWidth >= 768) && (windowResizeWidth < 1200)){
+		if(((windowResizeWidth >= 768) && (windowResizeWidth < 1200)) && (roomsId == "")){
 
-												console.log('add' + ' ' + windowResizeWidth);
+			$(".rooms__list").attr("id","rooms-carousel");
 
-			$(".rooms-carousel").owlCarousel({
+			$("#rooms-carousel").owlCarousel({
 				items : 2,
 				itemsCustom : [[768, 2]],
 				rewindNav : false,
@@ -148,45 +145,15 @@ $(document).ready(function(){
 			});
 		}
 
+		else if(((windowResizeWidth < 768) || (windowResizeWidth >= 1200)) && (roomsId != "")){
 
-		else if(((windowResizeWidth < 767) || (windowResizeWidth > 1199)) && (attrr == "rooms-carousel")){
+			$("#rooms-carousel").data('owlCarousel').destroy();
 
-											console.log('remove' + ' ' + windowResizeWidth);
-
-			//$(".rooms-carousel").data('owlCarousel').destroy();
-
-			$(".rooms__list").attr("id", "");
+			$(".rooms__list").attr("id","");
 		}
 
 	});
-
-
-/*
-	$(window).resize(function(){
-		var windowWidth = $(window).width();
-		if(windowWidth < 500) {
-			gallery.destroy();
-		}
-		else {
-			gallery.reinit({
-				items : 6,
-				rewindNav : true,
-				scrollPerPage : false,
-				pagination : false,
-			});
-		}
-	});
-*/
 
 });
 
-/*
-
-	$('#burger').on('click', function(e){
-		e.preventDefault();
-		$('main-menu').slideToggle();
-	});
-
-
-*/
 
