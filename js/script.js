@@ -66,6 +66,7 @@ $(document).ready(function(){
 	});
 
 
+
 	/* reviews-carousel */
 
 	$("#reviews-carousel").owlCarousel({
@@ -88,7 +89,6 @@ $(document).ready(function(){
 
 
 
-
 	/* discount-carousel */
 
 	$("#discount-carousel").owlCarousel({
@@ -101,7 +101,7 @@ $(document).ready(function(){
 
 
 
-	/* rooms-carousel */
+	/* rooms-carousel - карусель на странице Single room */
 
 
 	/* добавление карусели при размере окна от 768px до 1200px */
@@ -152,6 +152,28 @@ $(document).ready(function(){
 			$(".rooms__list").attr("id","");
 		}
 
+	});
+
+
+
+	/* room-gallery-carousel - галерея на странице Single room */
+
+	$("#room-gallery-carousel").owlCarousel({
+		items : 1,
+		itemsCustom : [[768, 1]],
+		rewindNav : false,
+		pagination : false,
+	});
+
+	var singleRoom = $("#room-gallery-carousel").data('owlCarousel');
+	var carousel = $("#room-gallery-carousel");
+
+	$('.single-room__description-prev').click(function(){
+	  singleRoom.prev();
+	});
+
+	$('.single-room__description-next').click(function(){
+	  singleRoom.next();
 	});
 
 });
