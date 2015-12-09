@@ -151,7 +151,8 @@ h4,
 p,
 ul,
 li,
-img {
+img,
+input {
   margin: 0;
   padding: 0;
   border: none;
@@ -174,6 +175,9 @@ blockquote {
 }
 button {
   padding: 0;
+}
+.page-header {
+  border-bottom: 1px solid #ebebeb;
 }
 @media (min-width: 1200px) {
   .page-header {
@@ -545,6 +549,9 @@ button {
 }
 .btn--orange {
   background-color: #ff7435;
+}
+.btn--orange:hover {
+  background-color: #e85715;
 }
 .btn img {
   width: 13px;
@@ -2004,6 +2011,7 @@ button {
   letter-spacing: 0.03em;
   border-bottom: 2px dotted #191919;
 }
+/* single-room */
 .single-room {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2018,7 +2026,6 @@ button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 1px solid #ebebeb;
 }
 @media (min-width: 320px) {
   .single-room {
@@ -2082,10 +2089,11 @@ button {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -2317,6 +2325,36 @@ button {
     margin-right: 14%;
   }
 }
+.single-room__facilities-item,
+.single-room__included-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.single-room .list-style {
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #ff7435;
+  border-right: 2px solid #ff7435;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-right: 7px;
+}
 .single-room .btn {
   margin-bottom: 18px;
 }
@@ -2418,6 +2456,382 @@ button {
   .rooms__item--hidden {
     display: block;
   }
+}
+/* form */
+.reservation,
+.date-of-rest,
+.place-to-stay,
+.type-of-room,
+.type-of-cottage,
+.personal-data,
+.payment,
+.form-reservation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reservation__title,
+.date-of-rest__title,
+.place-to-stay__title,
+.type-of-room__title,
+.type-of-cottage__title,
+.personal-data__title,
+.payment__title,
+.form-reservation__title {
+  font-family: 'PT Serif', serif;
+  font-size: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: #191919;
+}
+/*
+	font-family: @fira-sans;
+	font-weight: 500;
+	font-style: normal;
+	font-size: @text-size-small;
+	letter-spacing: 0.06em;
+	color: @gray;
+	text-transform: uppercase;
+*/
+@media (min-width: 320px) {
+  .reservation {
+    padding: 50px 0;
+  }
+}
+.reservation__title {
+  font-family: 'PT Serif Caption', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  color: #191919;
+}
+@media (min-width: 320px) {
+  .reservation__title {
+    padding: 20px 0;
+  }
+}
+.reservation__text {
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #191919;
+  line-height: 1.2em;
+}
+@media (min-width: 320px) {
+  .reservation__text {
+    padding: 0 45px;
+  }
+}
+.reservation__text span {
+  font-weight: 500;
+  color: #ff7435;
+}
+.form-step {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #979696;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.date-of-rest {
+  padding: 50px 0;
+  background: #ebebeb;
+}
+@media (min-width: 320px) {
+  .date-of-rest__arrival,
+  .date-of-rest__departure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 35px 0 0;
+  }
+}
+.date-of-rest__arrival label,
+.date-of-rest__departure label {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.date-of-rest__input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #eaeaea;
+}
+.date-of-rest__input-day,
+.date-of-rest__input-month,
+.date-of-rest__input-year {
+  height: 55px;
+  padding: 16px 0;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  text-transform: uppercase;
+  color: #0ab89d;
+}
+.date-of-rest__input-day:focus::-webkit-input-placeholder,
+.date-of-rest__input-month:focus::-webkit-input-placeholder,
+.date-of-rest__input-year:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.date-of-rest__input-day:focus::-moz-placeholder,
+.date-of-rest__input-month:focus::-moz-placeholder,
+.date-of-rest__input-year:focus::-moz-placeholder {
+  color: transparent;
+}
+.date-of-rest__input-day:focus:-moz-placeholder,
+.date-of-rest__input-month:focus:-moz-placeholder,
+.date-of-rest__input-year:focus:-moz-placeholder {
+  color: transparent;
+}
+.date-of-rest__input-day:focus:-ms-input-placeholder,
+.date-of-rest__input-month:focus:-ms-input-placeholder,
+.date-of-rest__input-year:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.date-of-rest__input-day:focus,
+.date-of-rest__input-month:focus,
+.date-of-rest__input-year:focus {
+  outline: none;
+}
+.date-of-rest__input-day,
+.date-of-rest__input-month {
+  width: 55px;
+  border-right: 1px solid #eaeaea;
+}
+.date-of-rest__input-year {
+  width: 70px;
+}
+.place-to-stay {
+  padding: 40px 0;
+}
+.place-to-stay__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  height: 160px;
+  margin-top: 20px;
+  padding: 23px 0 40px;
+  border: 1px solid #eaeaea;
+}
+.place-to-stay__hotel,
+.place-to-stay__cottage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  text-transform: uppercase;
+}
+.place-to-stay__hotel-title,
+.place-to-stay__cottage-title {
+  padding-bottom: 10px;
+}
+.place-to-stay__hotel input,
+.place-to-stay__cottage input {
+  display: none;
+}
+.place-to-stay__hotel input:checked + label > img,
+.place-to-stay__cottage input:checked + label > img {
+  opacity: 1;
+}
+.place-to-stay__hotel input:checked + label > .place-to-stay__checked,
+.place-to-stay__cottage input:checked + label > .place-to-stay__checked {
+  display: block;
+}
+.place-to-stay__hotel label,
+.place-to-stay__cottage label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.place-to-stay__hotel {
+  border-right: 1px solid #eaeaea;
+}
+.place-to-stay__img {
+  width: 85px;
+  opacity: 0.4;
+}
+.place-to-stay__checked {
+  position: absolute;
+  top: 106px;
+  left: 36px;
+  display: none;
+  width: 14px;
+  height: 9px;
+  border-bottom: 4px solid #0ab89d;
+  border-left: 4px solid #0ab89d;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.type-of-room,
+.type-of-cottage {
+  padding: 45px 0;
+  background: #ebebeb;
+}
+.type-of-room__list,
+.type-of-cottage__list {
+  margin: 30px 0 0;
+  background: #fff;
+}
+@media (min-width: 320px) {
+  .type-of-room__list,
+  .type-of-cottage__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    border-right: 1px solid #eaeaea;
+  }
+}
+.type-of-room__item,
+.type-of-cottage__item {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #979696;
+  text-transform: uppercase;
+}
+@media (min-width: 320px) {
+  .type-of-room__item,
+  .type-of-cottage__item {
+    padding: 15px 0;
+  }
+}
+.type-of-room__item input,
+.type-of-cottage__item input {
+  display: none;
+}
+.type-of-room__item input:checked + label,
+.type-of-cottage__item input:checked + label {
+  color: #191919;
+}
+.type-of-room__item label,
+.type-of-cottage__item label {
+  position: relative;
+  cursor: pointer;
+}
+.type-of-room__checked,
+.type-of-cottage__checked {
+  position: absolute;
+  top: 2px;
+  left: -40px;
+  display: none;
+  width: 14px;
+  height: 9px;
+  border-bottom: 4px solid #0ab89d;
+  border-left: 4px solid #0ab89d;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media (min-width: 320px) {
+  .type-of-room__features,
+  .type-of-cottage__features {
+    display: none;
+  }
+}
+.type-of-room__item input:checked + label > .type-of-room__checked {
+  display: block;
+}
+.type-of-cottage {
+  display: none;
+}
+.type-of-cottage__item input:checked + label > .type-of-cottage__checked {
+  display: block;
+}
+.personal-data {
+  padding: 48px 0;
+}
+.personal-data__title {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

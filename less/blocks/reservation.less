@@ -1,0 +1,44 @@
+.reservation{
+
+	@media (min-width: 320px){
+
+		padding: 50px 0;
+	}
+
+	&__title{
+
+		font-family: @serif-caption;
+		font-weight: 400;
+		font-style: normal;
+		font-size: @text-size-h2-big;
+		letter-spacing: 0.05em;
+		color: @gray-darker;
+
+		@media (min-width: 320px){
+
+			padding: 20px 0;
+		}
+	}
+
+	&__text{
+
+		text-align: center;
+		font-family: @fira-sans;
+		font-weight: 400;
+		font-style: normal;
+		font-size: @text-size-p;
+		color: @gray-darker;
+		line-height: 1.2em;
+
+		@media (min-width: 320px){
+
+			padding: 0 45px;
+		}
+
+		& span{
+
+			font-weight: 500;
+			color: @orange;
+		}
+	}
+}

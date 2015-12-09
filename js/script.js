@@ -52,15 +52,15 @@ $(document).ready(function(){
 
 	var gallery = $('#gallery-carousel').data('owlCarousel');
 
-	$('.gallery__prev').click(function(){
+	$('.gallery__prev').on('click', function(){
 		gallery.prev();
 	});
 
-	$('.gallery__next').click(function(){
+	$('.gallery__next').on('click', function(){
 		gallery.next();
 	});
 
-	$("#gallery-carousel img").click(function(e){
+	$("#gallery-carousel img").on('click', function(e){
 		var gallery_main_img = $(this).attr('src');
 		$('#gallery__main-img').attr('src', gallery_main_img);
 	});
@@ -72,18 +72,18 @@ $(document).ready(function(){
 	$("#reviews-carousel").owlCarousel({
 		items : 2,
 		itemsCustom : [[768, 1]],
-		rewindNav : false,
+		rewindNav : true,
 		pagination : false,
 	});
 
 	var owl = $("#reviews-carousel").data('owlCarousel');
 	var carousel = $("#reviews-carousel");
 
-	$('.reviews__prev').click(function(){
+	$('.reviews__prev').on('click', function(){
 	  owl.prev();
 	});
 
-	$('.reviews__next').click(function(){
+	$('.reviews__next').on('click', function(){
 	  owl.next();
 	});
 
@@ -145,7 +145,8 @@ $(document).ready(function(){
 			});
 		}
 
-		else if(((windowResizeWidth < 768) || (windowResizeWidth >= 1200)) && (roomsId != "")){
+		else if( ((windowResizeWidth < 768) || (windowResizeWidth >= 1200)) &&
+							(roomsId != "") && (roomsId != undefined) ){
 
 			$("#rooms-carousel").data('owlCarousel').destroy();
 
@@ -160,7 +161,7 @@ $(document).ready(function(){
 
 	$("#room-gallery-carousel").owlCarousel({
 		items : 1,
-		itemsCustom : [[768, 1]],
+		itemsCustom : [[320, 1]],
 		rewindNav : false,
 		pagination : false,
 	});
@@ -168,13 +169,31 @@ $(document).ready(function(){
 	var singleRoom = $("#room-gallery-carousel").data('owlCarousel');
 	var carousel = $("#room-gallery-carousel");
 
-	$('.single-room__description-prev').click(function(){
+	$('.single-room__description-prev').on('click', function(){
 	  singleRoom.prev();
 	});
 
-	$('.single-room__description-next').click(function(){
+	$('.single-room__description-next').on('click', function(){
 	  singleRoom.next();
 	});
+
+
+
+	/* на странице form переключатель блока выбора номера и блока выбора типа коттеджа */
+
+	$(".place-to-stay__hotel label").on('click', function(){
+
+			$(".type-of-cottage").css("display","none");
+			$(".type-of-room").css("display","flex");
+	});
+
+	$(".place-to-stay__cottage label").on('click', function(){
+
+			$(".type-of-room").css("display","none");
+			$(".type-of-cottage").css("display","flex");
+	});
+
+
 
 });
 

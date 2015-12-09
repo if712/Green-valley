@@ -1,0 +1,11 @@
+.reservation,
+.date-of-rest,
+.place-to-stay,
+.type-of-cottage,
+.personal-data,
+.payment,
+.form-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

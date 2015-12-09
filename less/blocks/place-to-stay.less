@@ -1,0 +1,87 @@
+.place-to-stay{
+
+	padding: 40px 0;
+
+	&__container{
+
+		display: flex;
+		align-items: center;
+		width: 280px;
+		height: 160px;
+		margin-top: 20px;
+		padding: 23px 0 40px;
+		border: 1px solid @border-color;
+	}
+
+	&__hotel,
+	&__cottage{
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 140px;
+		font-family: @fira-sans;
+		font-weight: 400;
+		font-style: normal;
+		font-size: @text-size-small;
+		letter-spacing: 0.06em;
+		color: @gray-dark;
+		text-transform: uppercase;
+
+		&-title{
+
+			padding-bottom: 10px;
+		}
+
+		& input{
+
+			display: none;
+
+			&:checked + label>img{
+
+				opacity: 1;
+			}
+
+			&:checked + label>.place-to-stay__checked{
+
+				display: block;
+			}
+		}
+
+		& label{
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+
+		}
+	}
+
+	&__hotel{
+
+		border-right: 1px solid @border-color;
+	}
+
+	&__img{
+
+		width: 85px;
+		opacity: 0.4;
+	}
+
+	&__checked{
+
+		position: absolute;
+		top: 106px;
+		left: 36px;
+		display: none;
+		width: 14px;
+		height: 9px;
+		border-bottom: 4px solid @blue;
+		border-left: 4px solid @blue;
+		transform: rotate(-45deg);
+	}
+}
+
+

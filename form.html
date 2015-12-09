@@ -3,94 +3,109 @@
   <head>
     <meta charset="utf-8">
     <title>Green Valley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
+
+
     <header class="page-header">
-      <div class="row">
-        <div class="col-xs-offset-1 col-xs-10 col-lg-offset-0 col-lg-2"><a href="" class="main-logo"><img src="" alt="">logo</a></div>
+      <div class="page-header__inner">
 
-        <div class="col-xs-1">burger</div>
+        <div class="page-header__logo-burger">
 
-        <div class="col-lg-5 visible-lg-block">
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a href="" class="main-nav__link">Номера</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Коттедж</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="col-lg-3 visible-lg-block">
-          <div class="page-header__contacts">
-            <b class="page-header__phone">+ 7 812 777-55-88</b>
-            г. Санкт-Петербург, Приморское шоссе, д. 600
+          <div class="page-header__logo">
+            <a href="" class="main-logo">
+              <span>Green</span>
+              <img src="img/logo.png" alt="">
+              <span>valley</span>
+            </a>
           </div>
+
+          <div class="page-header__burger"><a id="burger" href=""></a></div>
+
         </div>
 
-        <div class="col-lg-2 visible-lg-block">
-          <button class="btn btn--orange">Забронировать</button>
+        <nav class="page-header__nav">
+          <ul class="page-header__nav-list">
+            <li class="page-header__nav-item"><a href="">Номера</a></li>
+            <li class="page-header__nav-item"><a href="">Коттедж</a></li>
+            <li class="page-header__nav-item"><a href="">Ресторан</a></li>
+            <li class="page-header__nav-item"><a href="">Отдых</a></li>
+            <li class="page-header__nav-item"><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="page-header__contacts">
+          <div class="page-header__phone">+ 7 812 777-55-88</div>
+          г. Санкт-Петербург, Приморское ш.600
         </div>
+
+        <button class="btn btn--orange">Забронировать</button>
+
       </div>
     </header>
 
+
     <form action="#" class="main-form">
 
-      <section class="reservations">
-        <h1 class="reservations__title">Бронирование</h1>
-        <p>Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <span>+7 812 777-55-88</span></p>
+      <section class="reservation">
+        <h1 class="reservation__title">Бронирование</h1>
+        <p class="reservation__text">Чтобы забронировать номер в отеле или коттедж, <br>заполните форму ниже или просто позвоните <br>по телефону: <span>+7 812 777-55-88</span></p>
       </section>
 
 
       <section class="date-of-rest">
-        <div class="date-of-rest__inner">
-          <h3 class="step">ШАГ 1</h3>
-          <h2 class="date-of-rest__title">Дата отдыха</h2>
-          <div class="date-of-rest__container">
+        <h3 class="form-step">ШАГ 1</h3>
+        <h2 class="date-of-rest__title">Дата отдыха</h2>
 
-            <div class="date-of-rest__arrival">
-              <label for="arrival">ДАТА ВЪЕЗДА</label>
-              <div class="date-of-rest__input">
-                <input type="text" name="dayOfArrival" id="arrival" placeholder="дд">
-                <input type="text" name="mounthOfArrival" placeholder="мм">
-                <input type="text" name="yearOfArrival" placeholder="гггг">
-              </div>
+        <div class="date-of-rest__container">
+
+          <div class="date-of-rest__arrival">
+            <label for="arrival">ДАТА ВЪЕЗДА</label>
+            <div class="date-of-rest__input">
+              <input class="date-of-rest__input-day" type="text" name="dayOfArrival" id="arrival" placeholder="Дд">
+              <input class="date-of-rest__input-month" type="text" name="mounthOfArrival" placeholder="ММ">
+              <input class="date-of-rest__input-year" type="text" name="yearOfArrival" placeholder="ГГГГ">
             </div>
-
-            <div class="date-of-rest__departure">
-              <label for="departure">ДАТА ВЫЕЗДА</label>
-              <div class="date-of-rest__input">
-                <input type="text" name="dayOfDeparture" id="departure" placeholder="дд">
-                <input type="text" name="mounthOfDeparture" placeholder="мм">
-                <input type="text" name="yearOfDeparture" placeholder="гггг">
-              </div>
-            </div>
-
           </div>
+
+          <div class="date-of-rest__departure">
+            <label for="departure">ДАТА ВЫЕЗДА</label>
+            <div class="date-of-rest__input">
+              <input class="date-of-rest__input-day" type="text" name="dayOfDeparture" id="departure" placeholder="ДД">
+              <input class="date-of-rest__input-month" type="text" name="mounthOfDeparture" placeholder="ММ">
+              <input class="date-of-rest__input-year" type="text" name="yearOfDeparture" placeholder="ГГГГ">
+            </div>
+          </div>
+
         </div>
+
       </section>
 
 
       <section class="place-to-stay">
-          <h3 class="step">ШАГ 2</h3>
-          <h2 class="lplace-to-stay__title">Место проживания</h2>
+          <h3 class="form-step">ШАГ 2</h3>
+          <h2 class="place-to-stay__title">Место проживания</h2>
+
           <div class="place-to-stay__container">
 
             <div class="place-to-stay__hotel">
-              <input type="radio" name="placeToStay" id="hotel">
-              <label for="hotel">ОТЕЛЬ
-                <div class="place-to-stay__hotel-img"></div>
+              <input type="radio" name="placeToStay" id="hotel" checked="checked">
+              <label for="hotel">
+                <div class="place-to-stay__hotel-title">ОТЕЛЬ</div>
+                <img class="place-to-stay__img" src="img/hotel.png">
+                <div class="place-to-stay__checked"></div>
               </label>
             </div>
 
             <div class="place-to-stay__cottage">
               <input type="radio" name="placeToStay" id="cottage">
-              <label for="cottage">КОТТЕДЖ
-                <div class="place-to-stay__cottage-img"></div>
+              <label for="cottage">
+                <div class="place-to-stay__cottage-title">КОТТЕДЖ</div>
+                <img class="place-to-stay__img" src="img/cottage.png">
+                <div class="place-to-stay__checked"></div>
               </label>
             </div>
 
@@ -98,55 +113,142 @@
       </section>
 
 
+      <section class="type-of-room">
+        <h3 class="form-step">ШАГ 3</h3>
+        <h2 class="type-of-room__title">Тип номера</h2>
+
+        <ul class="type-of-room__list">
+
+          <li class="type-of-room__item">
+            <input type="radio" name="type-of-room" id="type-of-room-economy" checked="checked">
+            <label for="type-of-room-economy">Эконом
+              <div class="type-of-room__checked"></div>
+            </label>
+            <ul class="type-of-room__features">
+              <li class="type-of-room__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-room__feature">3 комнаты</li>
+              <li class="type-of-room__feature">5 спальных мест</li>
+              <li class="type-of-room__feature">раздельныц санузел</li>
+              <li class="type-of-room__feature">WI-FI</li>
+            </ul>
+          </li>
+
+          <li class="type-of-room__item">
+            <input type="radio" name="type-of-room" id="type-of-room-standard">
+            <label for="type-of-room-standard">Стандарт
+              <div class="type-of-room__checked"></div>
+            </label>
+            <ul class="type-of-room__features">
+              <li class="type-of-room__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-room__feature">3 комнаты</li>
+              <li class="type-of-room__feature">5 спальных мест</li>
+              <li class="type-of-room__feature">раздельныц санузел</li>
+              <li class="type-of-room__feature">WI-FI</li>
+            </ul>
+          </li>
+
+          <li class="type-of-room__item">
+            <input type="radio" name="type-of-room" id="type-of-room-standard-plus">
+            <label for="type-of-room-standard-plus">Стандарт+
+              <div class="type-of-room__checked"></div>
+            </label>
+            <ul class="type-of-room__features">
+              <li class="type-of-room__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-room__feature">3 комнаты</li>
+              <li class="type-of-room__feature">5 спальных мест</li>
+              <li class="type-of-room__feature">раздельныц санузел</li>
+              <li class="type-of-room__feature">WI-FI</li>
+            </ul>
+          </li>
+
+          <li class="type-of-room__item">
+            <input type="radio" name="type-of-room" id="type-of-room-lux">
+            <label for="type-of-room-lux">Люкс
+              <div class="type-of-room__checked"></div>
+            </label>
+            <ul class="type-of-room__features">
+              <li class="type-of-room__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-room__feature">3 комнаты</li>
+              <li class="type-of-room__feature">5 спальных мест</li>
+              <li class="type-of-room__feature">раздельныц санузел</li>
+              <li class="type-of-room__feature">WI-FI</li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </section>
+
+
       <section class="type-of-cottage">
-        <div class="type-of-cottage__inner">
-          <h3 class="step">ШАГ 3</h3>
-          <h2 class="type-of-cottage__title">Тип коттеджа</h2>
+        <h3 class="form-step">ШАГ 3</h3>
+        <h2 class="type-of-cottage__title">Тип коттеджа</h2>
 
-          <ul class="type-of-cottage__list">
+        <ul class="type-of-cottage__list">
 
-            <li class="cottage"><input type="radio" name="cottage" id="cottage-1"><label for="cottage-1">флагман</label>
-              <ul class="cottage__features">
-                <li class="cottage__feature">площадь 100м<sup>2</sup></li>
-                <li class="cottage__feature">3 комнаты</li>
-                <li class="cottage__feature">5 спальных мест</li>
-                <li class="cottage__feature">раздельныц санузел</li>
-                <li class="cottage__feature">WI-FI</li>
-              </ul>
-            </li>
-            <li class="cottage"><input type="radio" name="cottage" id="cottage-2"><label for="cottage-2">озерный</label>
-              <ul class="cottage__features">
-                <li class="cottage__feature">площадь 100м<sup>2</sup></li>
-                <li class="cottage__feature">3 комнаты</li>
-                <li class="cottage__feature">5 спальных мест</li>
-                <li class="cottage__feature">раздельныц санузел</li>
-                <li class="cottage__feature">WI-FI</li>
-              </ul>
-            <li class="cottage"><input type="radio" name="cottage" id="cottage-3"><label for="cottage-3">ольховка</label>
-              <ul class="cottage__features">
-                <li class="cottage__feature">площадь 100м<sup>2</sup></li>
-                <li class="cottage__feature">3 комнаты</li>
-                <li class="cottage__feature">5 спальных мест</li>
-                <li class="cottage__feature">раздельныц санузел</li>
-                <li class="cottage__feature">WI-FI</li>
-              </ul>
-            <li class="cottage"><input type="radio" name="cottage" id="cottage-4"><label for="cottage-4">портовый</label>
-              <ul class="cottage__features">
-                <li class="cottage__feature">площадь 100м<sup>2</sup></li>
-                <li class="cottage__feature">3 комнаты</li>
-                <li class="cottage__feature">5 спальных мест</li>
-                <li class="cottage__feature">раздельныц санузел</li>
-                <li class="cottage__feature">WI-FI</li>
-              </ul>
-            </li>
-          </ul>
+          <li class="type-of-cottage__item">
+            <input type="radio" name="type-of-cottage" id="type-of-cottage-flagship" checked="checked">
+            <label for="type-of-cottage-flagship">флагман
+              <div class="type-of-cottage__checked"></div>
+            </label>
+            <ul class="type-of-cottage__features">
+              <li class="type-of-cottage__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-cottage__feature">3 комнаты</li>
+              <li class="type-of-cottage__feature">5 спальных мест</li>
+              <li class="type-of-cottage__feature">раздельныц санузел</li>
+              <li class="type-of-cottage__feature">WI-FI</li>
+            </ul>
+          </li>
 
-        </div>
+          <li class="type-of-cottage__item">
+            <input type="radio" name="type-of-cottage" id="type-of-cottage-lacustrine">
+            <label for="type-of-cottage-lacustrine">озерный
+              <div class="type-of-cottage__checked"></div>
+            </label>
+            <ul class="type-of-cottage__features">
+              <li class="type-of-cottage__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-cottage__feature">3 комнаты</li>
+              <li class="type-of-cottage__feature">5 спальных мест</li>
+              <li class="type-of-cottage__feature">раздельныц санузел</li>
+              <li class="type-of-cottage__feature">WI-FI</li>
+            </ul>
+          </li>
+
+          <li class="type-of-cottage__item">
+            <input type="radio" name="type-of-cottage" id="type-of-cottage-alder">
+            <label for="type-of-cottage-alder">ольховка
+              <div class="type-of-cottage__checked"></div>
+            </label>
+            <ul class="type-of-cottage__features">
+              <li class="type-of-cottage__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-cottage__feature">3 комнаты</li>
+              <li class="type-of-cottage__feature">5 спальных мест</li>
+              <li class="type-of-cottage__feature">раздельныц санузел</li>
+              <li class="type-of-cottage__feature">WI-FI</li>
+            </ul>
+          </li>
+
+          <li class="type-of-cottage__item">
+            <input type="radio" name="type-of-cottage" id="type-of-cottage-port">
+            <label for="type-of-cottage-port">портовый
+              <div class="type-of-cottage__checked"></div>
+            </label>
+            <ul class="type-of-cottage__features">
+              <li class="type-of-cottage__feature">площадь 100м<sup>2</sup></li>
+              <li class="type-of-cottage__feature">3 комнаты</li>
+              <li class="type-of-cottage__feature">5 спальных мест</li>
+              <li class="type-of-cottage__feature">раздельныц санузел</li>
+              <li class="type-of-cottage__feature">WI-FI</li>
+            </ul>
+          </li>
+
+        </ul>
+
       </section>
 
 
       <section class="personal-data">
-        <h3 class="step">ШАГ 4</h3>
+        <h3 class="form-step">ШАГ 4</h3>
         <h2 class="personal-data__title">Персональная информация</h2>
         <div class="personal-data__container">
           <input type="text" name="firstName" placeholder="имя">
@@ -160,43 +262,41 @@
 
 
       <section class="payment">
-        <div class="payment__inner">
-          <h3 class="step">ШАГ 5</h3>
-          <h2 class="payment__title">Способ оплаты</h2>
-          <div class="payment__container">
+        <h3 class="form-step">ШАГ 5</h3>
+        <h2 class="payment__title">Способ оплаты</h2>
+        <div class="payment__container">
 
-            <div class="payment__to-pay">
-              <div class="payment__to-pay-title">К оплате</div>
-              <div class="payment__warning">Пожалуйста, <a href="#arrival" class="payment__warning-date">выберите дату</a> въезда и выезда, чтоыб увидеть сумму к оплате</div>
+          <div class="payment__to-pay">
+            <div class="payment__to-pay-title">К оплате</div>
+            <div class="payment__warning">Пожалуйста, <a href="#arrival" class="payment__warning-date">выберите дату</a> въезда и выезда, чтоыб увидеть сумму к оплате</div>
+          </div>
+
+          <div class="payment__type-of-payment">
+
+            <div class="payment__on-arrival">
+              <input type="radio" name="payment" id="on-arrival">
+              <label for="on-arrival">
+                <div class="payment__on-arrival-title">По приезду</div>
+              </label>
+              <div class="payment__on-arrival-description">Вы можете произвести оплату по факту заселения.</div>
             </div>
 
-            <div class="payment__type-of-payment">
+            <div class="payment__now">
+              <input type="radio" name="payment" id="pay-now">
+              <label for="pay-now">
+                <div class="payment__now">Сейчас</div>
+              </label>
+              <div class="payment__now-description">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
 
-              <div class="payment__on-arrival">
-                <input type="radio" name="payment" id="on-arrival">
-                <label for="on-arrival">
-                  <div class="payment__on-arrival-title">По приезду</div>
-                </label>
-                <div class="payment__on-arrival-description">Вы можете произвести оплату по факту заселения.</div>
-              </div>
-
-              <div class="payment__now">
-                <input type="radio" name="payment" id="pay-now">
-                <label for="pay-now">
-                  <div class="payment__now">Сейчас</div>
-                </label>
-                <div class="payment__now-description">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
-
-                <div class="payment__card">
-                  <label for="card-number">номер карты</label>
-                   <input type="text" name="cardNumber" id="card-number" placeholder="0000 0000 0000 0000">
-                  <label for="cvv">код cvv</label>
-                   <input type="text" name="cvv" id="cvv" placeholder="123">
-                  <label for="owner-last-name">фамилия владельца карты</label>
-                   <input type="text" name="ownerLastName" id="owner-last-name" placeholder="vladimir vladimirovich">
-                  <label for="valid-thru">действует до</label>
-                   <input type="text" name="validThru" id="valid-thru" placeholder="01/2018">
-                </div>
+              <div class="payment__card">
+                <label for="card-number">номер карты</label>
+                 <input type="text" name="cardNumber" id="card-number" placeholder="0000 0000 0000 0000">
+                <label for="cvv">код cvv</label>
+                 <input type="text" name="cvv" id="cvv" placeholder="123">
+                <label for="owner-last-name">фамилия владельца карты</label>
+                 <input type="text" name="ownerLastName" id="owner-last-name" placeholder="vladimir vladimirovich">
+                <label for="valid-thru">действует до</label>
+                 <input type="text" name="validThru" id="valid-thru" placeholder="01/2018">
               </div>
             </div>
           </div>
@@ -204,21 +304,33 @@
       </section>
 
       <button class="form-reservation"></button>
+
     </form>
 
     <footer class="page-footer">
+
       <div class="page-footer__adress">г. Санкт-Петербург Приморское ш.600</div>
+
       <div class="page-footer__social-logo">
-        <a href="" class="main-logo"> <img src="" alt=""></a>
+        <a href="" class="main-logo">
+          <span>Green</span>
+          <img src="img/logo.png" alt="">
+          <span>valley</span>
+        </a>
         <ul class="social-links">
-          <li class="social-links__item"><a href=""></a></li>
-          <li class="social-links__item"><a href=""></a></li>
-          <li class="social-links__item"><a href=""></a></li>
+          <li class="social-links__item"><a href=""><img src="img/vk-footer.jpg"></a></li>
+          <li class="social-links__item"><a href=""><img src="img/instagram-footer.jpg"></a></li>
+          <li class="social-links__item"><a href=""><img src="img/fb-footer.jpg"></a></li>
         </ul>
       </div>
+
       <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
+
     </footer>
 
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
 
