@@ -1,9 +1,68 @@
 .personal-data{
 
-	padding: 48px 0;
+	padding: 48px 5.3% 40px;
 
 	&__title{
 
 		text-align: center;
 	}
+
+	&__list{
+
+		font-family: @fira-sans;
+		font-weight: 400;
+		font-style: normal;
+		font-size: @text-size-small;
+		color: @gray-dark;
+
+		@media (min-width: 320px){
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 15px 0;
+		}
+
+		& li{
+
+			position: relative;
+
+			@media (min-width: 320px){
+
+				width: 100%;
+				margin-top: 18px;
+			}
+		}
+
+		& input{
+
+			border: 1px solid @border-color;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.06em;
+			color: @blue;
+
+			@media (min-width: 320px){
+
+				width: 100%;
+				height: 48px;
+				padding: 15px;
+			}
+		}
+
+		& label{
+
+			@media (min-width: 320px){
+
+				padding-top: 5px;
+			}
+		}
+	}
+
+	&__check-mark{
+
+		top: 18px;
+		left: 6%;
+	}
+
 }

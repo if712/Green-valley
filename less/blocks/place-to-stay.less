@@ -36,16 +36,6 @@
 		& input{
 
 			display: none;
-
-			&:checked + label>img{
-
-				opacity: 1;
-			}
-
-			&:checked + label>.place-to-stay__checked{
-
-				display: block;
-			}
 		}
 
 		& label{
@@ -68,19 +58,22 @@
 
 		width: 85px;
 		opacity: 0.4;
+
+		input:checked ~ &{
+
+      opacity: 1;
+    }
 	}
 
-	&__checked{
+	&__check-mark{
 
-		position: absolute;
 		top: 106px;
 		left: 36px;
-		display: none;
-		width: 14px;
-		height: 9px;
-		border-bottom: 4px solid @blue;
-		border-left: 4px solid @blue;
-		transform: rotate(-45deg);
+
+		input:checked ~ &{
+
+      display: block;
+    }
 	}
 }
 

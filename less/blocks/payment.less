@@ -1,0 +1,69 @@
+.payment{
+
+	padding: 45px 0;
+	background: @gray-light;
+
+	&__container{
+
+		@media (min-width: 320px){
+
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			width: 100%;
+			margin: 35px 0 0;
+		}
+	}
+
+	&__type-of-payment{
+
+		@media (min-width: 320px){
+
+			width: 100%;
+			//margin: 0 0 0;
+		}
+	}
+
+	&__on-arrival{
+
+		@media (min-width: 320px){
+
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 57px;
+			font-family: @fira-sans;
+			font-weight: 500;
+			font-style: normal;
+			font-size: @text-size-small;
+			letter-spacing: 0.06em;
+			color: @gray-dark;
+			text-transform: uppercase;
+			background: #fff;
+		}
+
+		&-title{
+
+			@media (min-width: 320px){
+
+				margin-left: 78px;
+			}
+		}
+
+		&-description{
+
+			@media (min-width: 320px){
+
+				display: none;
+			}
+		}
+	}
+
+	& input{
+
+		@media (min-width: 320px){
+
+			display: none;
+		}
+	}
+}

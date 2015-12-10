@@ -179,6 +179,47 @@ $(document).ready(function(){
 
 
 
+
+	/* на странице form подсвека даты */
+
+
+	$('.date').focusout(function(){
+
+		var dates = $(this).children();
+		var result;
+
+		var check = function(i, boolean){
+
+			var dateValue = dates[i].value;
+
+			if( (dateValue > 0) && (i < 2) ){
+
+				i++;
+
+				check(i, true);
+			}
+
+			else if((dateValue > 0) && (i == 2)){
+
+				return result = true;
+			}
+
+			else{
+
+				return result = false;
+			}
+		};
+
+		var chekValue = check(0,true);
+
+		if(result){
+
+			$(this).children().css('color', '#0ab89d');
+		}
+	});
+
+
+
 	/* на странице form переключатель блока выбора номера и блока выбора типа коттеджа */
 
 	$(".place-to-stay__hotel label").on('click', function(){
@@ -193,6 +234,25 @@ $(document).ready(function(){
 			$(".type-of-cottage").css("display","flex");
 	});
 
+
+	/* на странице form подсветка персональной информации */
+
+
+	$('.personal-data__list input').blur(function(){
+
+		var personalVal = $(this).val();
+		console.log(personalVal);
+
+		if(personalVal != ""){
+
+			$(this).parent().children().css('display','block');
+		}
+		else{
+
+			console.log('else');
+		}
+
+	});
 
 
 });

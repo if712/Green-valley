@@ -24,6 +24,28 @@
 		font-style: normal;
 		color: @gray-darker;
 	}
+
+	& input{
+
+		text-align: center;
+		font-family: @fira-sans;
+		font-weight: 500;
+		font-style: normal;
+		font-size: @text-size-small;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: @gray;
+
+		&:focus::-webkit-input-placeholder{color: transparent;}
+		&:focus::-moz-placeholder{color: transparent;}
+		&:focus:-moz-placeholder{color: transparent;}
+		&:focus:-ms-input-placeholder{color: transparent;}
+
+		&:focus{
+
+			outline: none;
+		}
+	}
 }
 
 /*

@@ -2494,6 +2494,73 @@ button {
   font-style: normal;
   color: #191919;
 }
+.reservation input,
+.date-of-rest input,
+.place-to-stay input,
+.type-of-room input,
+.type-of-cottage input,
+.personal-data input,
+.payment input,
+.form-reservation input {
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #979696;
+}
+.reservation input:focus::-webkit-input-placeholder,
+.date-of-rest input:focus::-webkit-input-placeholder,
+.place-to-stay input:focus::-webkit-input-placeholder,
+.type-of-room input:focus::-webkit-input-placeholder,
+.type-of-cottage input:focus::-webkit-input-placeholder,
+.personal-data input:focus::-webkit-input-placeholder,
+.payment input:focus::-webkit-input-placeholder,
+.form-reservation input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.reservation input:focus::-moz-placeholder,
+.date-of-rest input:focus::-moz-placeholder,
+.place-to-stay input:focus::-moz-placeholder,
+.type-of-room input:focus::-moz-placeholder,
+.type-of-cottage input:focus::-moz-placeholder,
+.personal-data input:focus::-moz-placeholder,
+.payment input:focus::-moz-placeholder,
+.form-reservation input:focus::-moz-placeholder {
+  color: transparent;
+}
+.reservation input:focus:-moz-placeholder,
+.date-of-rest input:focus:-moz-placeholder,
+.place-to-stay input:focus:-moz-placeholder,
+.type-of-room input:focus:-moz-placeholder,
+.type-of-cottage input:focus:-moz-placeholder,
+.personal-data input:focus:-moz-placeholder,
+.payment input:focus:-moz-placeholder,
+.form-reservation input:focus:-moz-placeholder {
+  color: transparent;
+}
+.reservation input:focus:-ms-input-placeholder,
+.date-of-rest input:focus:-ms-input-placeholder,
+.place-to-stay input:focus:-ms-input-placeholder,
+.type-of-room input:focus:-ms-input-placeholder,
+.type-of-cottage input:focus:-ms-input-placeholder,
+.personal-data input:focus:-ms-input-placeholder,
+.payment input:focus:-ms-input-placeholder,
+.form-reservation input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.reservation input:focus,
+.date-of-rest input:focus,
+.place-to-stay input:focus,
+.type-of-room input:focus,
+.type-of-cottage input:focus,
+.personal-data input:focus,
+.payment input:focus,
+.form-reservation input:focus {
+  outline: none;
+}
 /*
 	font-family: @fira-sans;
 	font-weight: 500;
@@ -2503,6 +2570,17 @@ button {
 	color: @gray;
 	text-transform: uppercase;
 */
+.check-mark-blue {
+  position: absolute;
+  display: none;
+  width: 14px;
+  height: 9px;
+  border-bottom: 4px solid #0ab89d;
+  border-left: 4px solid #0ab89d;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 @media (min-width: 320px) {
   .reservation {
     padding: 50px 0;
@@ -2583,7 +2661,7 @@ button {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
-.date-of-rest__input {
+.date-of-rest__inputs {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2592,54 +2670,20 @@ button {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid #e5e5e5;
 }
-.date-of-rest__input-day,
-.date-of-rest__input-month,
-.date-of-rest__input-year {
+.date-of-rest__inputs-day,
+.date-of-rest__inputs-month,
+.date-of-rest__inputs-year {
   height: 55px;
-  padding: 16px 0;
-  text-align: center;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  color: #4c4c4c;
-  text-transform: uppercase;
-  color: #0ab89d;
+  padding: 16px 0 16px 14px;
 }
-.date-of-rest__input-day:focus::-webkit-input-placeholder,
-.date-of-rest__input-month:focus::-webkit-input-placeholder,
-.date-of-rest__input-year:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-.date-of-rest__input-day:focus::-moz-placeholder,
-.date-of-rest__input-month:focus::-moz-placeholder,
-.date-of-rest__input-year:focus::-moz-placeholder {
-  color: transparent;
-}
-.date-of-rest__input-day:focus:-moz-placeholder,
-.date-of-rest__input-month:focus:-moz-placeholder,
-.date-of-rest__input-year:focus:-moz-placeholder {
-  color: transparent;
-}
-.date-of-rest__input-day:focus:-ms-input-placeholder,
-.date-of-rest__input-month:focus:-ms-input-placeholder,
-.date-of-rest__input-year:focus:-ms-input-placeholder {
-  color: transparent;
-}
-.date-of-rest__input-day:focus,
-.date-of-rest__input-month:focus,
-.date-of-rest__input-year:focus {
-  outline: none;
-}
-.date-of-rest__input-day,
-.date-of-rest__input-month {
+.date-of-rest__inputs-day,
+.date-of-rest__inputs-month {
   width: 55px;
-  border-right: 1px solid #eaeaea;
+  border-right: 1px solid #e5e5e5;
 }
-.date-of-rest__input-year {
+.date-of-rest__inputs-year {
   width: 70px;
 }
 .place-to-stay {
@@ -2658,7 +2702,7 @@ button {
   height: 160px;
   margin-top: 20px;
   padding: 23px 0 40px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #e5e5e5;
 }
 .place-to-stay__hotel,
 .place-to-stay__cottage {
@@ -2692,14 +2736,6 @@ button {
 .place-to-stay__cottage input {
   display: none;
 }
-.place-to-stay__hotel input:checked + label > img,
-.place-to-stay__cottage input:checked + label > img {
-  opacity: 1;
-}
-.place-to-stay__hotel input:checked + label > .place-to-stay__checked,
-.place-to-stay__cottage input:checked + label > .place-to-stay__checked {
-  display: block;
-}
 .place-to-stay__hotel label,
 .place-to-stay__cottage label {
   display: -webkit-box;
@@ -2719,24 +2755,21 @@ button {
   cursor: pointer;
 }
 .place-to-stay__hotel {
-  border-right: 1px solid #eaeaea;
+  border-right: 1px solid #e5e5e5;
 }
 .place-to-stay__img {
   width: 85px;
   opacity: 0.4;
 }
-.place-to-stay__checked {
-  position: absolute;
+input:checked ~ .place-to-stay__img {
+  opacity: 1;
+}
+.place-to-stay__check-mark {
   top: 106px;
   left: 36px;
-  display: none;
-  width: 14px;
-  height: 9px;
-  border-bottom: 4px solid #0ab89d;
-  border-left: 4px solid #0ab89d;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+}
+input:checked ~ .place-to-stay__check-mark {
+  display: block;
 }
 .type-of-room,
 .type-of-cottage {
@@ -2751,22 +2784,9 @@ button {
 @media (min-width: 320px) {
   .type-of-room__list,
   .type-of-cottage__list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 100%;
     padding: 30px 0;
-    border-right: 1px solid #eaeaea;
+    border-right: 1px solid #e5e5e5;
   }
 }
 .type-of-room__item,
@@ -2782,35 +2802,60 @@ button {
 @media (min-width: 320px) {
   .type-of-room__item,
   .type-of-cottage__item {
+    width: 100%;
     padding: 15px 0;
+  }
+}
+.type-of-room__item label,
+.type-of-cottage__item label {
+  position: relative;
+}
+@media (min-width: 320px) {
+  .type-of-room__item label,
+  .type-of-cottage__item label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
 }
 .type-of-room__item input,
 .type-of-cottage__item input {
   display: none;
 }
-.type-of-room__item input:checked + label,
-.type-of-cottage__item input:checked + label {
-  color: #191919;
-}
-.type-of-room__item label,
-.type-of-cottage__item label {
-  position: relative;
+.type-of-room__item-title,
+.type-of-cottage__item-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #979696;
+  text-transform: uppercase;
   cursor: pointer;
 }
-.type-of-room__checked,
-.type-of-cottage__checked {
-  position: absolute;
+input:checked ~ .type-of-room__item-title,
+input:checked ~ .type-of-cottage__item-title {
+  color: #191919;
+}
+.type-of-room__check-mark,
+.type-of-cottage__check-mark {
   top: 2px;
-  left: -40px;
-  display: none;
-  width: 14px;
-  height: 9px;
-  border-bottom: 4px solid #0ab89d;
-  border-left: 4px solid #0ab89d;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  left: 28%;
+}
+input:checked + .type-of-room__check-mark,
+input:checked + .type-of-cottage__check-mark {
+  display: block;
 }
 @media (min-width: 320px) {
   .type-of-room__features,
@@ -2818,20 +2863,136 @@ button {
     display: none;
   }
 }
-.type-of-room__item input:checked + label > .type-of-room__checked {
-  display: block;
-}
 .type-of-cottage {
   display: none;
 }
-.type-of-cottage__item input:checked + label > .type-of-cottage__checked {
-  display: block;
-}
 .personal-data {
-  padding: 48px 0;
+  padding: 48px 5.3% 40px;
 }
 .personal-data__title {
   text-align: center;
+}
+.personal-data__list {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #4c4c4c;
+}
+@media (min-width: 320px) {
+  .personal-data__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 15px 0;
+  }
+}
+.personal-data__list li {
+  position: relative;
+}
+@media (min-width: 320px) {
+  .personal-data__list li {
+    width: 100%;
+    margin-top: 18px;
+  }
+}
+.personal-data__list input {
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0ab89d;
+}
+@media (min-width: 320px) {
+  .personal-data__list input {
+    width: 100%;
+    height: 48px;
+    padding: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .personal-data__list label {
+    padding-top: 5px;
+  }
+}
+.personal-data__check-mark {
+  top: 18px;
+  left: 6%;
+}
+.payment {
+  padding: 45px 0;
+  background: #ebebeb;
+}
+@media (min-width: 320px) {
+  .payment__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 35px 0 0;
+  }
+}
+@media (min-width: 320px) {
+  .payment__type-of-payment {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .payment__on-arrival {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 57px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: #4c4c4c;
+    text-transform: uppercase;
+    background: #fff;
+  }
+}
+@media (min-width: 320px) {
+  .payment__on-arrival-title {
+    margin-left: 78px;
+  }
+}
+@media (min-width: 320px) {
+  .payment__on-arrival-description {
+    display: none;
+  }
+}
+@media (min-width: 320px) {
+  .payment input {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
