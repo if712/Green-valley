@@ -152,7 +152,8 @@ p,
 ul,
 li,
 img,
-input {
+input,
+button {
   margin: 0;
   padding: 0;
   border: none;
@@ -934,7 +935,7 @@ button {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.btn-blue {
+.btn-green {
   width: 140px;
   padding: 7px;
   margin: 35px 0 45px;
@@ -2570,7 +2571,7 @@ button {
 	color: @gray;
 	text-transform: uppercase;
 */
-.check-mark-blue {
+.check-mark {
   position: absolute;
   display: none;
   width: 14px;
@@ -2580,6 +2581,11 @@ button {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+.check-mark--gray {
+  display: block;
+  border-bottom: 4px solid #ebebeb;
+  border-left: 4px solid #ebebeb;
 }
 @media (min-width: 320px) {
   .reservation {
@@ -2632,6 +2638,40 @@ button {
   background: #ebebeb;
 }
 @media (min-width: 320px) {
+  .date-of-rest__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .date-of-rest__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (min-width: 320px) {
   .date-of-rest__arrival,
   .date-of-rest__departure {
     display: -webkit-box;
@@ -2648,6 +2688,12 @@ button {
         -ms-flex-align: center;
             align-items: center;
     padding: 35px 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .date-of-rest__arrival,
+  .date-of-rest__departure {
+    margin: 0 10px;
   }
 }
 .date-of-rest__arrival label,
@@ -2784,9 +2830,36 @@ input:checked ~ .place-to-stay__check-mark {
 @media (min-width: 320px) {
   .type-of-room__list,
   .type-of-cottage__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     padding: 30px 0;
-    border-right: 1px solid #e5e5e5;
+  }
+}
+@media (min-width: 768px) {
+  .type-of-room__list,
+  .type-of-cottage__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 140px;
   }
 }
 .type-of-room__item,
@@ -2804,6 +2877,14 @@ input:checked ~ .place-to-stay__check-mark {
   .type-of-cottage__item {
     width: 100%;
     padding: 15px 0;
+  }
+}
+@media (min-width: 768px) {
+  .type-of-room__item,
+  .type-of-cottage__item {
+    width: 100%;
+    padding: 35px 0;
+    border-right: 1px solid #e5e5e5;
   }
 }
 .type-of-room__item label,
@@ -2848,10 +2929,19 @@ input:checked ~ .type-of-room__item-title,
 input:checked ~ .type-of-cottage__item-title {
   color: #191919;
 }
-.type-of-room__check-mark,
-.type-of-cottage__check-mark {
-  top: 2px;
-  left: 28%;
+@media (min-width: 320px) {
+  .type-of-room__check-mark,
+  .type-of-cottage__check-mark {
+    top: 2px;
+    left: 26%;
+  }
+}
+@media (min-width: 768px) {
+  .type-of-room__check-mark,
+  .type-of-cottage__check-mark {
+    top: 30px;
+    left: 46%;
+  }
 }
 input:checked + .type-of-room__check-mark,
 input:checked + .type-of-cottage__check-mark {
@@ -2861,6 +2951,61 @@ input:checked + .type-of-cottage__check-mark {
   .type-of-room__features,
   .type-of-cottage__features {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .type-of-room__features,
+  .type-of-cottage__features {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+.type-of-room__features-lacustrine,
+.type-of-cottage__features-lacustrine,
+.type-of-room__features-alder,
+.type-of-cottage__features-alder,
+.type-of-room__features-port,
+.type-of-cottage__features-port {
+  display: none;
+}
+.type-of-room__features-flagship,
+.type-of-cottage__features-flagship {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .type-of-room__features > li,
+  .type-of-cottage__features > li {
+    width: 100%;
+  }
+}
+.type-of-room__features-list,
+.type-of-cottage__features-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 140px;
+  width: 100%;
+  padding: 30px 0;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+}
+@media (min-width: 768px) {
+  .type-of-room__features__feature,
+  .type-of-cottage__features__feature {
+    width: 100%;
   }
 }
 .type-of-cottage {
@@ -2930,7 +3075,7 @@ input:checked + .type-of-cottage__check-mark {
   left: 6%;
 }
 .payment {
-  padding: 45px 0;
+  padding: 45px 0 48px;
   background: #ebebeb;
 }
 @media (min-width: 320px) {
@@ -2952,10 +3097,73 @@ input:checked + .type-of-cottage__check-mark {
     margin: 35px 0 0;
   }
 }
+.payment__to-pay {
+  padding: 20px 40px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+}
+@media (min-width: 320px) {
+  .payment__to-pay {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.payment__to-pay-title {
+  text-transform: uppercase;
+}
+.payment__to-pay-dash {
+  margin: 12px 0;
+  font-weight: 500;
+}
+.payment__to-pay-warning-exclamation {
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  padding: 0 4px;
+  line-height: 1.4em;
+  margin-right: 5px;
+  background: #e71818;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+}
+.payment__to-pay-warning-date {
+  color: #4c4c4c;
+  border-bottom: 1px dotted #191919;
+}
 @media (min-width: 320px) {
   .payment__type-of-payment {
     width: 100%;
   }
+}
+.payment__on-arrival {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  text-transform: uppercase;
 }
 @media (min-width: 320px) {
   .payment__on-arrival {
@@ -2969,14 +3177,16 @@ input:checked + .type-of-cottage__check-mark {
             align-items: center;
     width: 100%;
     height: 57px;
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px;
-    letter-spacing: 0.06em;
-    color: #4c4c4c;
-    text-transform: uppercase;
-    background: #fff;
+  }
+}
+@media (min-width: 320px) {
+  .payment__on-arrival input {
+    display: none;
+  }
+}
+@media (min-width: 320px) {
+  .payment__on-arrival-check-mark {
+    margin: 2px 0 0 40px;
   }
 }
 @media (min-width: 320px) {
@@ -2989,10 +3199,140 @@ input:checked + .type-of-cottage__check-mark {
     display: none;
   }
 }
+.payment__now {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+}
 @media (min-width: 320px) {
-  .payment input {
+  .payment__now {
+    margin: 23px 0;
+  }
+}
+.payment__now-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  text-transform: uppercase;
+  background: #fff;
+}
+@media (min-width: 320px) {
+  .payment__now-inner {
+    width: 100%;
+  }
+}
+.payment__now-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 57px;
+}
+@media (min-width: 320px) {
+  .payment__now-header input {
     display: none;
   }
+}
+@media (min-width: 320px) {
+  .payment__now-check-mark {
+    margin: 21px 0 0 40px;
+  }
+}
+@media (min-width: 320px) {
+  .payment__now-title {
+    margin-left: 78px;
+  }
+}
+@media (min-width: 320px) {
+  .payment__now-description {
+    display: none;
+  }
+}
+.payment__card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #4c4c4c;
+  font-weight: 400;
+}
+@media (min-width: 320px) {
+  .payment__card {
+    padding: 0 40px;
+  }
+}
+.payment__card label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.payment__card input {
+  border: 1px solid #e5e5e5;
+}
+@media (min-width: 320px) {
+  .payment__card input {
+    height: 38px;
+    margin: 12px 0 17px;
+  }
+}
+.payment__card-cvv,
+.payment__card-thru {
+  width: 132px;
+}
+.reservation-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 80px;
+  background: #ebebeb;
+}
+.reservation-form-btn button {
+  height: 50px;
+  width: 278px;
+  background: #0ab89d;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #fafafa;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
