@@ -95,7 +95,7 @@
               <label>
                 <input type="radio" name="placeToStay" checked="checked">
                 <div class="place-to-stay__hotel-title">ОТЕЛЬ</div>
-                <img class="place-to-stay__img" src="img/hotel.png">
+                <img class="place-to-stay__img" src="img/hotel.jpg">
                 <div class="place-to-stay__check-mark check-mark"></div>
               </label>
             </div>
@@ -104,7 +104,7 @@
               <label>
                 <input type="radio" name="placeToStay">
                 <div class="place-to-stay__cottage-title">КОТТЕДЖ</div>
-                <img class="place-to-stay__img" src="img/cottage.png">
+                <img class="place-to-stay__img" src="img/cottage.jpg">
                 <div class="place-to-stay__check-mark check-mark"></div>
               </label>
             </div>
@@ -226,42 +226,74 @@
         <ul class="type-of-cottage__features">
 
           <li class="type-of-cottage__features-flagship">
+            <div><img src="img/triangle.png"></div>
             <ul class="type-of-cottage__features-list">
-              <li class="type-of-cottage__feature">площадь 100м<sup>2</sup></li>
-              <li class="type-of-cottage__feature">3 комнаты</li>
-              <li class="type-of-cottage__feature">5 спальных мест</li>
-              <li class="type-of-cottage__feature">раздельный санузел</li>
-              <li class="type-of-cottage__feature">WI-FI</li>
+
+              <li class="type-of-cottage__features-item">
+                <div class="type-of-cottage__features-item-img-wrapper">
+                  <img src="img/area.jpg">
+                </div>
+                  площадь 100м<sup>2</sup>
+              </li>
+
+              <li class="type-of-cottage__features-item">
+                <div class="type-of-cottage__features-item-img-wrapper">
+                  <img src="img/rooms.jpg">
+                </div>
+                  3 комнаты
+              </li>
+
+              <li class="type-of-cottage__features-item">
+                <div class="type-of-cottage__features-item-img-wrapper">
+                  <img src="img/beds.jpg">
+                </div>
+                5 спальных мест
+              </li>
+
+              <li class="type-of-cottage__features-item">
+                <div class="type-of-cottage__features-item-img-wrapper">
+                  <img src="img/bathroom.jpg">
+                </div>
+                раздельный санузел
+              </li>
+
+              <li class="type-of-cottage__features-item">
+                <div class="type-of-cottage__features-item-img-wrapper">
+                  <img src="img/wi-fi.jpg">
+                </div>
+                WI-FI
+              </li>
+
             </ul>
           </li>
 
           <li class="type-of-cottage__features-lacustrine">
             <ul class="type-of-cottage__features-list">
-              <li class="type-of-cottage__feature">площадь 110м<sup>2</sup></li>
-              <li class="type-of-cottage__feature">4 комнаты</li>
-              <li class="type-of-cottage__feature">7 спальных мест</li>
-              <li class="type-of-cottage__feature">раздельный санузел</li>
-              <li class="type-of-cottage__feature">WI-FI</li>
+              <li class="type-of-cottage__features-item"><img src="img/area.jpg">площадь 110м<sup>2</sup></li>
+              <li class="type-of-cottage__features-item">4 комнаты</li>
+              <li class="type-of-cottage__features-item">7 спальных мест</li>
+              <li class="type-of-cottage__features-item">раздельный санузел</li>
+              <li class="type-of-cottage__features-item">WI-FI</li>
             </ul>
           </li>
 
           <li class="type-of-cottage__features-alder">
             <ul class="type-of-cottage__features-list">
-              <li class="type-of-cottage__feature">площадь 120м<sup>2</sup></li>
-              <li class="type-of-cottage__feature">5 комнаты</li>
-              <li class="type-of-cottage__feature">10 спальных мест</li>
-              <li class="type-of-cottage__feature">раздельный санузел</li>
-              <li class="type-of-cottage__feature">WI-FI</li>
+              <li class="type-of-cottage__features-item">площадь 120м<sup>2</sup></li>
+              <li class="type-of-cottage__features-item">5 комнаты</li>
+              <li class="type-of-cottage__features-item">10 спальных мест</li>
+              <li class="type-of-cottage__features-item">раздельный санузел</li>
+              <li class="type-of-cottage__features-item">WI-FI</li>
             </ul>
           </li>
 
           <li class="type-of-cottage__features-port">
             <ul class="type-of-cottage__features-list">
-              <li class="type-of-cottage__feature">площадь 130м<sup>2</sup></li>
-              <li class="type-of-cottage__feature">6 комнаты</li>
-              <li class="type-of-cottage__feature">12 спальных мест</li>
-              <li class="type-of-cottage__feature">раздельный санузел</li>
-              <li class="type-of-cottage__feature">WI-FI</li>
+              <li class="type-of-cottage__features-item">площадь 130м<sup>2</sup></li>
+              <li class="type-of-cottage__features-item">6 комнаты</li>
+              <li class="type-of-cottage__features-item">12 спальных мест</li>
+              <li class="type-of-cottage__features-item">раздельный санузел</li>
+              <li class="type-of-cottage__features-item">WI-FI</li>
             </ul>
           </li>
 
@@ -287,13 +319,13 @@
           <li>
             <div class="personal-data__check-mark check-mark"></div>
             <input type="tel" name="phoneNumber" id="phone-number" placeholder="номер телефона" required>
-            <label for="phone-number">Мы свяжемся с вами в случае необходимости.</label>
+            <label for="phone-number"><div>Мы свяжемся с вами в случае необходимости.</div></label>
           </li>
 
           <li>
             <div class="personal-data__check-mark check-mark"></div>
             <input type="email" name="email" id="email" placeholder="e-mail" required>
-            <label for="email">На этот адрес мы вышлем вам подтверждение о забронированном номере.</label>
+            <label for="email"><div>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div></label>
           </li>
         </ul>
       </section>
@@ -315,8 +347,8 @@
 
             <div class="payment__on-arrival">
               <label>
-                <div class="payment__on-arrival-check-mark check-mark check-mark--gray"></div>
                 <input type="radio" name="payment" id="on-arrival">
+                <div class="payment__on-arrival-check-mark check-mark check-mark--gray"></div>
                 <div class="payment__on-arrival-title">По приезду</div>
                 <div class="payment__on-arrival-description">Вы можете произвести оплату по факту заселения.</div>
               </label>
@@ -326,19 +358,20 @@
               <label class="payment__now-inner">
 
                 <div class="payment__now-header">
+                  <input type="radio" name="payment" id="pay-now" checked="checked">
                   <div class="payment__now-check-mark check-mark check-mark--gray"></div>
-                  <input type="radio" name="payment" id="pay-now">
                   <div class="payment__now-title">Сейчас</div>
                   <div class="payment__now-description">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
                 </div>
 
                 <div class="payment__card">
+
                   <label for="card-number">номер карты
-                    <input type="text" name="cardNumber" id="card-number" placeholder="0000 0000 0000 0000">
+                    <input class="payment__card-number" type="text" name="cardNumber" id="card-number" placeholder="0000 0000 0000 0000">
                   </label>
 
-                  <label for="owner-last-name">фамилия владельца карты
-                    <input type="text" name="ownerLastName" id="owner-last-name" placeholder="vladimir vladimirovich">
+                  <label for="owner-name">фамилия владельца карты
+                    <input class="payment__card-name" type="text" name="owneName" id="owner-name" placeholder="vladimir vladimirovich">
                   </label>
 
                   <label for="cvv">код cvv
@@ -348,6 +381,7 @@
                   <label for="valid-thru">действует до
                     <input class="payment__card-thru" type="text" name="validThru" id="valid-thru" placeholder="01/2018">
                   </label>
+
                 </div>
               </label>
             </div>

@@ -9,7 +9,6 @@
 	& button{
 
 		height: 50px;
-		width: 278px;
 		background: @green;
 		font-family: @fira-sans;
 		font-weight: 500;
@@ -18,5 +17,20 @@
 		letter-spacing: 0.06em;
 		color: @gray-lighter;
 		text-transform: uppercase;
+
+		@media (min-width: 320px){
+
+			width: 278px;
+		}
+
+		@media (min-width: 768px){
+
+			width: 100%;
+		}
+
+		@media (min-width: 1200px){
+
+			width: 780px;
+		}
 	}
 }

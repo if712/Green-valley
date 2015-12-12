@@ -255,6 +255,18 @@ $(document).ready(function(){
 	});
 
 
+
+
+	/* на странице form подсветка данных банковской карты */
+
+
+	$('.payment__now').on('click', function(){
+
+			$('#pay-now').css('checked','checked');
+	});
+
+
+
 });
 
 

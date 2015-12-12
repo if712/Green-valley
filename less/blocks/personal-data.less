@@ -1,6 +1,14 @@
 .personal-data{
 
-	padding: 48px 5.3% 40px;
+	@media (min-width: 320px){
+
+		padding: 48px 5.3% 40px;
+	}
+
+	@media (min-width: 768px){
+
+		padding: 48px 0 40px;
+	}
 
 	&__title{
 
@@ -23,6 +31,22 @@
 			margin: 15px 0;
 		}
 
+		@media (min-width: 768px){
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			margin: 15px 0;
+			padding: 0 9px;
+		}
+
+		@media (min-width: 1200px){
+
+			width: 780px;
+			padding: 0;
+		}
+
 		& li{
 
 			position: relative;
@@ -30,6 +54,13 @@
 			@media (min-width: 320px){
 
 				width: 100%;
+				margin-top: 18px;
+			}
+
+			@media (min-width: 768px){
+
+				width: 50%;
+				padding: 0 8px;
 				margin-top: 18px;
 			}
 		}
@@ -50,11 +81,16 @@
 			}
 		}
 
-		& label{
+		& label div{
 
 			@media (min-width: 320px){
 
-				padding-top: 5px;
+				margin-top: 5px;
+			}
+
+			@media (min-width: 768px){
+
+				margin-top: 15px;
 			}
 		}
 	}
