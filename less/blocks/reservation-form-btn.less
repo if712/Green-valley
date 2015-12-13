@@ -3,8 +3,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-bottom: 80px;
 	background: @gray-light;
+
+	@media (min-width: 320px){
+
+		padding-bottom: 80px;
+	}
+
+	@media (min-width: 768px){
+
+		padding-bottom: 75px;
+	}
 
 	& button{
 

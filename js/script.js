@@ -25,7 +25,7 @@ $(document).ready(function(){
 	  var link = this.getAttribute("href");
 	  var linkSlide = document.querySelector(link);
 
-    for (i=0, j=slides.length; i<j; i++) {
+    for (var i=0, j=slides.length; i<j; i++) {
 
 		  slides[i].classList.remove("promo-slider__item--active");
 		}
@@ -170,10 +170,12 @@ $(document).ready(function(){
 	var carousel = $("#room-gallery-carousel");
 
 	$('.single-room__description-prev').on('click', function(){
+
 	  singleRoom.prev();
 	});
 
 	$('.single-room__description-next').on('click', function(){
+
 	  singleRoom.next();
 	});
 
@@ -210,7 +212,7 @@ $(document).ready(function(){
 			}
 		};
 
-		var chekValue = check(0,true);
+		check(0,true);
 
 		if(result){
 
@@ -224,15 +226,44 @@ $(document).ready(function(){
 
 	$(".place-to-stay__hotel label").on('click', function(){
 
-			$(".type-of-cottage").css("display","none");
-			$(".type-of-room").css("display","flex");
+		$(".type-of-cottage").css("display","none");
+		$(".type-of-room").css("display","flex");
 	});
 
 	$(".place-to-stay__cottage label").on('click', function(){
 
-			$(".type-of-room").css("display","none");
-			$(".type-of-cottage").css("display","flex");
+		$(".type-of-room").css("display","none");
+		$(".type-of-cottage").css("display","flex");
 	});
+
+
+
+	/* на странице form переключатель описания типа номера и типа коттеджа */
+
+
+	$(".type-of-cottage__item label").each(function(indx){
+
+	  $(this).on('click', function(){
+
+	  	var inputAttr = $(this).children().filter(':input').attr('id');
+
+	  	$(".type-of-cottage__features>li").css("display","none");
+	  	$("." + inputAttr).css("display","flex");
+	  });
+	});
+
+
+	$(".type-of-room__item label").each(function(indx){
+
+	  $(this).on('click', function(){
+
+	  	var inputAttr = $(this).children().filter(':input').attr('id');
+
+	  	$(".type-of-room__features>li").css("display","none");
+	  	$("." + inputAttr).css("display","flex");
+	  });
+	});
+
 
 
 	/* на странице form подсветка персональной информации */
@@ -256,15 +287,31 @@ $(document).ready(function(){
 
 
 
-
-	/* на странице form подсветка данных банковской карты */
+	/* на странице form выбор блока "Сейчас" при клике на любое место блока */
 
 
 	$('.payment__now').on('click', function(){
 
-			$('#pay-now').css('checked','checked');
+			$('#pay-now').attr('checked','checked');
 	});
 
+
+
+	/* на странице form выбор блока "Сейчас" при клике на любое место блока */
+
+
+	$('.reservation-form-btn').on('click', function(){
+
+		$('.date-of-rest__inputs input').each(function(indx){
+
+			var inputVal = $(this).val();
+
+			if(inputVal == ""){
+
+				$(".payment__to-pay-warning").css('display','block');
+			}
+		});
+	});
 
 
 });
