@@ -641,6 +641,7 @@ input[type='number'] {
 .gallery__showed {
   width: 100%;
   overflow: hidden;
+  border: 1px solid #4c4c4c;
 }
 @media (max-width: 767px) {
   .gallery__showed {
@@ -649,6 +650,7 @@ input[type='number'] {
 }
 .gallery__showed > img {
   width: 100%;
+  margin: -6% 0 -10%;
 }
 .gallery__thumbnails {
   display: -webkit-box;
@@ -657,7 +659,6 @@ input[type='number'] {
   display: flex;
   width: 100%;
   padding: 0;
-  margin-top: -3px;
   overflow: hidden;
   list-style-type: none;
 }
