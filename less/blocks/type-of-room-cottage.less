@@ -116,6 +116,23 @@
     }
 	}
 
+	&__triangle{
+
+		display: none;
+		position: absolute;
+		bottom: -52px;
+		left: 43%;
+		z-index: 1;
+		width: 21px;
+		height: 19px;
+		background: url('/../../img/triangle.png') no-repeat;
+
+		input:checked ~ &{
+
+      display: block;
+    }
+	}
+
 	&__features{
 
 		@media (min-width: 320px){
@@ -126,7 +143,7 @@
 		@media (min-width: 768px){
 
 			display: block;
-			margin-top: 50px;
+			margin-top: 20px;
 			width: 100%;
 		}
 
@@ -146,9 +163,7 @@
 
 			&>div{
 
-				position: absolute;
-				top: -14px;
-    		left: 86px;
+				//
 			}
 		}
 

@@ -134,6 +134,7 @@
 
 			& a{
 
+				position: relative;
 				font-size: @text-size-small;
 				font-family: @fira-sans;
 				font-weight: 500;
@@ -147,6 +148,20 @@
 				&:active{
 
 					color: @orange;
+
+					& span{
+
+						border-bottom: 2px solid @orange;
+					}
+				}
+
+				& span{
+
+					position: absolute;
+					top: 23px;
+					left: 28%;
+					width: 26px;
+					height: 1px;
 				}
 			}
 		}

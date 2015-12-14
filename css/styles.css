@@ -350,6 +350,7 @@ input[type='number'] {
   }
 }
 .page-header__nav-item a {
+  position: relative;
   font-size: 14px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 500;
@@ -362,6 +363,17 @@ input[type='number'] {
 .page-header__nav-item a:hover,
 .page-header__nav-item a:active {
   color: #ff7435;
+}
+.page-header__nav-item a:hover span,
+.page-header__nav-item a:active span {
+  border-bottom: 2px solid #ff7435;
+}
+.page-header__nav-item a span {
+  position: absolute;
+  top: 23px;
+  left: 28%;
+  width: 26px;
+  height: 1px;
 }
 .page-header__contacts {
   width: 280px;
@@ -933,6 +945,10 @@ input[type='number'] {
   color: #fafafa;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+}
+.btn-green:hover {
+  background: #fff;
+  color: #0ab89d;
 }
 @media (min-width: 1200px) {
   .owl-theme .owl-controls .owl-page span {
@@ -1998,6 +2014,9 @@ input[type='number'] {
   letter-spacing: 0.03em;
   border-bottom: 2px dotted #191919;
 }
+.categories__description-read-more a:hover {
+  border-bottom: none;
+}
 /* single-room */
 .single-room {
   display: -webkit-box;
@@ -2612,6 +2631,8 @@ input[type='number'] {
 .reservation__text span {
   font-weight: 500;
   color: #ff7435;
+  margin: 0 4px;
+  line-height: 1.5em;
 }
 .form-step {
   font-family: 'Fira Sans', sans-serif;
@@ -2989,6 +3010,21 @@ input:checked + .type-of-room__check-mark,
 input:checked + .type-of-cottage__check-mark {
   display: block;
 }
+.type-of-room__triangle,
+.type-of-cottage__triangle {
+  display: none;
+  position: absolute;
+  bottom: -52px;
+  left: 43%;
+  z-index: 1;
+  width: 21px;
+  height: 19px;
+  background: url('../img/triangle.png') no-repeat;
+}
+input:checked ~ .type-of-room__triangle,
+input:checked ~ .type-of-cottage__triangle {
+  display: block;
+}
 @media (min-width: 320px) {
   .type-of-room__features,
   .type-of-cottage__features {
@@ -2999,7 +3035,7 @@ input:checked + .type-of-cottage__check-mark {
   .type-of-room__features,
   .type-of-cottage__features {
     display: block;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
   }
 }
@@ -3015,12 +3051,6 @@ input:checked + .type-of-cottage__check-mark {
     position: relative;
     width: 100%;
   }
-}
-.type-of-room__features > li > div,
-.type-of-cottage__features > li > div {
-  position: absolute;
-  top: -14px;
-  left: 86px;
 }
 .type-of-room__features-lacustrine,
 .type-of-cottage__features-lacustrine,
@@ -3663,6 +3693,9 @@ input:checked ~ .payment__now-check-mark {
   letter-spacing: 0.06em;
   color: #fafafa;
   text-transform: uppercase;
+}
+.reservation-form-btn button:hover {
+  background: #079b84;
 }
 @media (min-width: 320px) {
   .reservation-form-btn button {

@@ -182,6 +182,18 @@ $(document).ready(function(){
 
 
 
+	/* календарь на странице form */
+
+	// $(function() {
+
+ //    $("#arrival").datepicker();
+ //  });
+
+ //  $(function() {
+
+ //    $("#departure").datepicker();
+ //  });
+
 	/* на странице form подсвека даты */
 
 
@@ -297,7 +309,7 @@ $(document).ready(function(){
 
 
 
-	/* на странице form выбор блока "Сейчас" при клике на любое место блока */
+	/* на странице form проверка даты */
 
 
 	$('.reservation-form-btn').on('click', function(){
