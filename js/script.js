@@ -63,20 +63,6 @@ $(document).ready(function(){
 	});
 
 
-	$('.gallery__thumbnails .owl-wrapper-outer').mouseenter(
-
-		function(){
-		$(this).css('opacity','1');
-	});
-
-
-	$('.gallery__thumbnails .owl-wrapper-outer').mouseleave(
-
-		function(){
-		$(this).css('opacity','1');
-	});
-
-
 	var gallery = $('#gallery-carousel').data('owlCarousel');
 
 	$('.gallery__prev').on('click', function(){
