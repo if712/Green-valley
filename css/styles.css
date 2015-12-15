@@ -3426,6 +3426,7 @@ input:checked ~ .type-of-cottage__triangle {
 .payment__to-pay-warning-date {
   color: #4c4c4c;
   border-bottom: 1px dotted #191919;
+  margin: 0 4px;
 }
 @media (min-width: 320px) {
   .payment__type-of-payment {

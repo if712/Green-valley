@@ -239,16 +239,70 @@ $(document).ready(function(){
 
 
 	/* календарь на странице form */
+/*
+	$(function() {
+    $( "#datepicker" ).datepicker("showAnim");
+  });
+*/
 
-	// $(function() {
 
- //    $("#arrival").datepicker();
- //  });
+	/* на странице form ввод даты */
 
- //  $(function() {
 
- //    $("#departure").datepicker();
- //  });
+	function inputTab(elem){
+
+		elem.addEventListener("keyup", function(event) {
+
+			console.log('Элемент day был изменен - keyup.');
+
+		  var inputValue = $(this).val();
+		  var inputLength = inputValue.length;
+		  console.log('inputValue == ' + inputValue);
+		  console.log('inputValue-length == ' + inputValue.length);
+
+		  if(inputLength == 2){
+
+		  	$(this).next().focus();
+		  }
+		})
+	}
+
+	function inputFocusout(elem){
+
+		elem.addEventListener("keyup", function(event) {
+
+			console.log('inputFocusout Элемент day был изменен - keyup.');
+
+		  var yearValue = $(this).val();
+		  var yearLength = yearValue.length;
+		  console.log('inputFocusout yearValue == ' + yearValue);
+		  console.log('inputFocusout yearValue-length == ' + yearValue.length);
+
+			if(yearLength == 4){
+
+		  	console.log('focusout');
+		  	$(this).focusout();
+		  };
+		})
+	}
+
+
+	$('.day').focus(function(){
+
+	  inputTab(this);
+	});
+
+	$('.month').focus(function(){
+
+	  inputTab(this);
+	});
+
+	$('.year').focus(function(){
+
+	  inputFocusout(this);
+	});
+
+
 
 	/* на странице form подсвека даты */
 
@@ -262,14 +316,14 @@ $(document).ready(function(){
 
 			var dateValue = dates[i].value;
 
-			if( (dateValue > 0) && (i < 2) ){
+			if( (dateValue != "") && (i < 2) ){
 
 				i++;
 
 				check(i, true);
 			}
 
-			else if((dateValue > 0) && (i == 2)){
+			else if((dateValue != "") && (i == 2)){
 
 				return result = true;
 			}
