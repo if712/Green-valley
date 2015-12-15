@@ -50,6 +50,8 @@ $(document).ready(function(){
 		pagination : false,
 	});
 
+	$('.gallery__thumbnails .owl-wrapper').css('left','-8%');
+
 	var gallery = $('#gallery-carousel').data('owlCarousel');
 
 	$('.gallery__prev').on('click', function(){

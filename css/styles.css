@@ -631,6 +631,7 @@ input[type='number'] {
 @media (min-width: 320px) {
   .gallery__inner {
     width: 100%;
+    height: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -641,7 +642,6 @@ input[type='number'] {
 .gallery__showed {
   width: 100%;
   overflow: hidden;
-  border: 1px solid #4c4c4c;
 }
 @media (max-width: 767px) {
   .gallery__showed {
@@ -661,6 +661,7 @@ input[type='number'] {
   padding: 0;
   overflow: hidden;
   list-style-type: none;
+  background: #4c4c4c;
 }
 .gallery__item {
   cursor: pointer;
