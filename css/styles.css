@@ -2027,6 +2027,7 @@ input[type='number'] {
 }
 /* single-room */
 .single-room {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2180,6 +2181,31 @@ input[type='number'] {
 @media (min-width: 1200px) {
   .single-room__description-img {
     width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .single-room__description-zoom {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .single-room__description-zoom {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 2.5%;
+    width: 33px;
+    height: 33px;
+    background: url('../img/zoom.png') no-repeat;
+    background-size: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .single-room__description-zoom {
+    top: 4%;
+    right: 9.5%;
+    width: 22px;
+    height: 22px;
   }
 }
 .single-room__description-prev,
@@ -2374,6 +2400,24 @@ input[type='number'] {
 }
 .single-room .btn {
   margin-bottom: 18px;
+}
+.img-fullscreen {
+  display: none;
+  position: fixed;
+  top: 10%;
+}
+.img-fullscreen img {
+  width: 100%;
+}
+.img-fullscreen__close {
+  display: block;
+  position: absolute;
+  top: 3%;
+  right: 2.5%;
+  width: 33px;
+  height: 33px;
+  background: url('../img/zoom-close.png') no-repeat;
+  background-size: 100%;
 }
 .rooms {
   background: #f6f6f6;

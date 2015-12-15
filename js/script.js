@@ -117,7 +117,72 @@ $(document).ready(function(){
 
 
 
-	/* rooms-carousel - карусель на странице Single room */
+	/* room-gallery-carousel - галерея на странице Single room - фото номера */
+
+	$("#room-gallery-carousel").owlCarousel({
+		items : 1,
+		itemsCustom : [[320, 1]],
+		rewindNav : false,
+		pagination : false,
+		addClassActive: true
+	});
+
+	var singleRoom = $("#room-gallery-carousel").data('owlCarousel');
+	var carousel = $("#room-gallery-carousel");
+
+	$('.single-room__description-prev').on('click', function(){
+
+	  singleRoom.prev();
+	});
+
+	$('.single-room__description-next').on('click', function(){
+
+	  singleRoom.next();
+	});
+
+
+
+
+	/* Fullscreen на странице Single room */
+
+	$(".single-room__description-zoom").on('click', function(){
+
+		var activeImgSrc = $('#room-gallery-carousel .active .single-room__description-img').attr('src');
+		var zoomWindowWidth = window.innerWidth;
+
+		$('.img-fullscreen').css('display','block');
+		$('.img-fullscreen img').css('width',zoomWindowWidth);
+		$('.img-fullscreen img').attr('src',activeImgSrc);
+
+		$('section').css('opacity','0.9');
+		$('header').css('opacity','0.9');
+		$('footer').css('opacity','0.9');
+	});
+
+	$(".img-fullscreen__close").on('click', function(){
+
+		$('.img-fullscreen').css('display','none');
+
+		$('section').css('opacity','1');
+		$('header').css('opacity','1');
+		$('footer').css('opacity','1');
+	});
+
+	$(document).keydown(function(key){
+
+	  if (key.which == 27) {
+
+	  	$('.img-fullscreen').css('display','none');
+
+			$('section').css('opacity','1');
+			$('header').css('opacity','1');
+			$('footer').css('opacity','1');
+	  }
+	});
+
+
+
+	/* rooms-carousel - карусель на странице Single room - выбор номера */
 
 
 	/* добавление карусели при размере окна от 768px до 1200px */
@@ -170,31 +235,6 @@ $(document).ready(function(){
 		}
 
 	});
-
-
-
-	/* room-gallery-carousel - галерея на странице Single room */
-
-	$("#room-gallery-carousel").owlCarousel({
-		items : 1,
-		itemsCustom : [[320, 1]],
-		rewindNav : false,
-		pagination : false,
-	});
-
-	var singleRoom = $("#room-gallery-carousel").data('owlCarousel');
-	var carousel = $("#room-gallery-carousel");
-
-	$('.single-room__description-prev').on('click', function(){
-
-	  singleRoom.prev();
-	});
-
-	$('.single-room__description-next').on('click', function(){
-
-	  singleRoom.next();
-	});
-
 
 
 
