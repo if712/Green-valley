@@ -50,6 +50,33 @@ $(document).ready(function(){
 		pagination : false,
 	});
 
+	$('.gallery__thumbnails .owl-wrapper-outer').css('opacity','0.6');
+
+
+	$('.gallery__thumbnails .owl-wrapper-outer').hover(
+
+		function(){
+		$(this).css('opacity','1');
+	},
+		function(){
+		$(this).css('opacity','0.6');
+	});
+
+
+	$('.gallery__thumbnails .owl-wrapper-outer').mouseenter(
+
+		function(){
+		$(this).css('opacity','1');
+	});
+
+
+	$('.gallery__thumbnails .owl-wrapper-outer').mouseleave(
+
+		function(){
+		$(this).css('opacity','1');
+	});
+
+
 	var gallery = $('#gallery-carousel').data('owlCarousel');
 
 	$('.gallery__prev').on('click', function(){

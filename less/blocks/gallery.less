@@ -1,14 +1,15 @@
-.gallery {
+.gallery{
 
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 50px;
 
-	&__inner {
+	&__inner{
 
 		position: relative;
 		overflow: hidden;
+		border: 3px solid #fff;
 
 		@media (min-width: 320px) {
 
@@ -22,7 +23,7 @@
 		}
 	}
 
-	&__showed {
+	&__showed{
 
 		width: 100%;
 		overflow: hidden;
@@ -39,22 +40,28 @@
 		}
 	}
 
-	&__thumbnails {
+	&__thumbnails{
 
 		display: flex;
 		width: 100%;
 		padding: 0;
 		overflow: hidden;
 		list-style-type: none;
-		background: @gray-dark;
+		background: #000;
+		opacity: 0.5;
+
+		&:hover{
+
+			opacity: 1;
+		}
 	}
 
-	&__item {
+	&__item{
 
 		cursor: pointer;
 	}
 
-	&__thumbnail-img {
+	&__thumbnail-img{
 
 		width: 100%;
 	}
