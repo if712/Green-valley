@@ -627,7 +627,7 @@ input[type='number'] {
 .gallery__inner {
   position: relative;
   overflow: hidden;
-  border: 3px solid #fff;
+  border: 1px solid #fff;
 }
 @media (min-width: 320px) {
   .gallery__inner {
@@ -669,6 +669,7 @@ input[type='number'] {
   opacity: 1;
 }
 .gallery__item {
+  height: 100%;
   cursor: pointer;
 }
 .gallery__thumbnail-img {

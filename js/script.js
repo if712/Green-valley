@@ -48,10 +48,13 @@ $(document).ready(function(){
 		rewindNav : false,
 		scrollPerPage : true,
 		pagination : false,
+		slideSpeed : 400
 	});
 
-	$('.gallery__thumbnails .owl-wrapper-outer').css('opacity','0.6');
+	$('.gallery__thumbnails .owl-wrapper').css('transform', 'translate3d(-105px, 0px, 0px)');
 
+
+	$('.gallery__thumbnails .owl-wrapper-outer').css('opacity','0.6');
 
 	$('.gallery__thumbnails .owl-wrapper-outer').hover(
 
