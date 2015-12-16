@@ -246,7 +246,7 @@ $(document).ready(function(){
 
     $( "#datepicker-arrival" ).datepicker({
       //defaultDate: "+1w",
-      changeMonth: true,
+      //changeMonth: true,
       numberOfMonths: 1,
       onClose: function( selectedDate ) {
         $( "#datepicker-departure" ).datepicker( "option", "minDate", selectedDate );
@@ -254,7 +254,7 @@ $(document).ready(function(){
     });
     $( "#datepicker-departure" ).datepicker({
       //defaultDate: "+1w",
-      changeMonth: true,
+      //changeMonth: true,
       numberOfMonths: 1,
       // onClose: function( selectedDate ) {
       //   $( "#datepicker-arrival" ).datepicker( "option", "maxDate", selectedDate );
