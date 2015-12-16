@@ -250,39 +250,38 @@ $(document).ready(function(){
   });
 
 
-	$('#datepicker-arrival').change(function(){
+	function divideDate(id){
 
-	  console.log('Элемент #datepicker-arrival был изменен.');
+		console.log('Элемент #datepicker-arrival был изменен.');
 
-		var inputDatepicker = document.querySelector('#datepicker-arrival').value;
+		var inputDatepicker = document.querySelector('#' + id).value;
 		console.log(inputDatepicker);
 
 		if(inputDatepicker.length > 2){
 
-			document.querySelector('.date-of-rest__arrival .day').value = inputDatepicker.substr(3,2);
-			document.querySelector('.date-of-rest__arrival .month').value = inputDatepicker.substr(0,2);
-			document.querySelector('.date-of-rest__arrival .year').value = inputDatepicker.substr(6,4);
-			$(this).parent().children().css('color', '#0ab89d');
+			document.querySelector('#' + id).value = inputDatepicker.substr(3,2);
+			document.querySelector('#' + id).parentNode.children[1].value = inputDatepicker.substr(0,2);
+			document.querySelector('#' + id).parentNode.children[2].value = inputDatepicker.substr(6,4);
+			$('#' + id).parent().children().css('color', '#0ab89d');
 		}
+	}
+
+	$('#datepicker-arrival').change(function(){
+
+		var arrivalId = $(this).attr('id');
+		console.log(arrivalId);
+
+	  divideDate(arrivalId);
 	});
 
 
 	$('#datepicker-departure').change(function(){
 
-	  console.log('Элемент #datepicker-departure был изменен.');
+	  var departureId = $(this).attr('id');
+		console.log(departureId);
 
-		var inputDeparture = document.querySelector('#datepicker-departure').value;
-		console.log(inputDeparture);
-
-		if(inputDeparture.length > 2){
-
-			document.querySelector('.date-of-rest__departure .day').value = inputDeparture.substr(3,2);
-			document.querySelector('.date-of-rest__departure .month').value = inputDeparture.substr(0,2);
-			document.querySelector('.date-of-rest__departure .year').value = inputDeparture.substr(6,4);
-			$(this).parent().children().css('color', '#0ab89d');
-		}
+	  divideDate(departureId);
 	});
-
 
 
 
