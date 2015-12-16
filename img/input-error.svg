@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="&#x421;&#x43B;&#x43E;&#x439;_1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.439 13.304"
-	 style="enable-background:new 0 0 13.439 13.304;" xml:space="preserve">
-<line style="fill:#FFFFFF;" x1="2.053" y1="0.235" x2="12.386" y2="12.235"/>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-298.4 390.3 14.1 14" style="enable-background:new -298.4 390.3 14.1 14;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#BF0500;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<line class="st0" x1="-295.9" y1="390.9" x2="-285.6" y2="402.9"/>
 <g>
-	<line style="fill:none;stroke:#BF0500;stroke-width:3;stroke-miterlimit:10;" x1="1.053" y1="12.235" x2="12.386" y2="1.068"/>
+	<line class="st1" x1="-296.9" y1="402.9" x2="-285.6" y2="391.8"/>
 </g>
-<line style="fill:#F11E10;stroke:#BF0500;stroke-width:3;stroke-miterlimit:10;" x1="12.386" y1="12.235" x2="1.053" y2="1.068"/>
+<line class="st1" x1="-285.6" y1="402.9" x2="-296.9" y2="391.8"/>
 </svg>

@@ -394,17 +394,25 @@ $(document).ready(function(){
 	$('.personal-data__list input').blur(function(){
 
 		var personalVal = $(this).val();
-		console.log(personalVal);
+		var inputType = $(this).attr('type');
+		var emailPattern=/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
 
-		if(personalVal != ""){
+		if((personalVal != "") && (inputType != "email")){
 
-			$(this).parent().children().css('display','block');
-		}
-		else{
-
-			console.log('else');
+			$(this).parent().children('.check-mark').css('display','block');
 		}
 
+		else if((inputType == "email") && (emailPattern.test(personalVal))){
+
+			$(this).parent().children('.error').css('display','none');
+			$(this).parent().children('.check-mark').css('display','block');
+		}
+
+		else if((inputType == "email") && (emailPattern.test(personalVal) == false)){
+
+			$(this).parent().children('.check-mark').css('display','none');
+			$(this).parent().children('.error').css('display','block');
+		}
 	});
 
 

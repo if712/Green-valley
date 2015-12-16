@@ -2648,6 +2648,13 @@ input[type='number'] {
   border-bottom: 4px solid #ebebeb;
   border-left: 4px solid #ebebeb;
 }
+.error {
+  position: absolute;
+  display: none;
+  width: 12px;
+  height: 12px;
+  background: url('../img/input-error.svg') no-repeat;
+}
 @media (min-width: 320px) {
   .reservation {
     padding: 50px 0;
@@ -3285,7 +3292,7 @@ input:checked ~ .type-of-cottage__triangle {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #0ab89d;
+  color: #4c4c4c;
 }
 @media (min-width: 320px) {
   .personal-data__list input {
@@ -3306,7 +3313,11 @@ input:checked ~ .type-of-cottage__triangle {
 }
 .personal-data__check-mark {
   top: 18px;
-  left: 6%;
+  left: 8%;
+}
+.personal-data__error {
+  top: 18px;
+  left: 8%;
 }
 .payment {
   background: #ebebeb;

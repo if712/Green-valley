@@ -1,0 +1,6 @@
+.error {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: url('../img/input-error.svg') no-repeat;
+}
