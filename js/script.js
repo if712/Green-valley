@@ -239,14 +239,67 @@ $(document).ready(function(){
 
 
 	/* календарь на странице form */
-/*
+
 	$(function() {
-    $( "#datepicker" ).datepicker("showAnim");
+
+    //$("#datepicker-arrival").datepicker();
+
+    $( "#datepicker-arrival" ).datepicker({
+      //defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#datepicker-departure" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#datepicker-departure" ).datepicker({
+      //defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      // onClose: function( selectedDate ) {
+      //   $( "#datepicker-arrival" ).datepicker( "option", "maxDate", selectedDate );
+      // }
+    });
   });
-*/
 
 
-	/* на странице form ввод даты */
+	$('#datepicker-arrival').change(function(){
+
+	  console.log('Элемент #datepicker-arrival был изменен.');
+
+		var inputDatepicker = document.querySelector('#datepicker-arrival').value;
+		console.log(inputDatepicker);
+
+		if(inputDatepicker.length > 2){
+
+			document.querySelector('.date-of-rest__arrival .day').value = inputDatepicker.substr(3,2);
+			document.querySelector('.date-of-rest__arrival .month').value = inputDatepicker.substr(0,2);
+			document.querySelector('.date-of-rest__arrival .year').value = inputDatepicker.substr(6,4);
+			$(this).parent().children().css('color', '#0ab89d');
+		}
+	});
+
+
+	$('#datepicker-departure').change(function(){
+
+	  console.log('Элемент #datepicker-departure был изменен.');
+
+		var inputDeparture = document.querySelector('#datepicker-departure').value;
+		console.log(inputDeparture);
+
+		if(inputDeparture.length > 2){
+
+			document.querySelector('.date-of-rest__departure .day').value = inputDeparture.substr(3,2);
+			document.querySelector('.date-of-rest__departure .month').value = inputDeparture.substr(0,2);
+			document.querySelector('.date-of-rest__departure .year').value = inputDeparture.substr(6,4);
+			$(this).parent().children().css('color', '#0ab89d');
+		}
+	});
+
+
+
+
+	/* на странице form переключение на следующий input */
 
 
 	function inputTab(elem){
