@@ -51,18 +51,56 @@ $(document).ready(function(){
 		slideSpeed : 400
 	});
 
-	$('.gallery__thumbnails .owl-wrapper').css('transform', 'translate3d(-105px, 0px, 0px)');
+
+	var windowWidth = window.innerWidth;
+
+	function galleryOpacity(actualWidth){
+
+			console.log(actualWidth);
+
+		if(actualWidth >= '768'){
 
 
-	$('.gallery__thumbnails .owl-wrapper-outer').css('opacity','0.6');
+			$('.gallery__thumbnails .owl-wrapper').css('transform', 'translate3d(-4%, 0px, 0px)');
 
-	$('.gallery__thumbnails .owl-wrapper-outer').hover(
+			$('.gallery__thumbnails .owl-wrapper-outer').css('opacity','0.6');
 
-		function(){
-		$(this).css('opacity','1');
-	},
-		function(){
-		$(this).css('opacity','0.6');
+			$('.gallery__thumbnails .owl-wrapper-outer').hover(
+
+				function(){
+				$(this).css('opacity','1');
+			},
+				function(){
+				$(this).css('opacity','0.6');
+			});
+		}
+
+		else{
+
+			$('.gallery__thumbnails .owl-wrapper').css('transform', 'translate3d(0px, 0px, 0px)');
+
+			$('.gallery__thumbnails .owl-wrapper-outer').css('opacity','1');
+
+			$('.gallery__thumbnails .owl-wrapper-outer').hover(
+
+				function(){
+				$(this).css('opacity','1');
+			},
+				function(){
+				$(this).css('opacity','1');
+			});
+		}
+	}
+
+	galleryOpacity(windowWidth);
+
+
+	$(window).resize(function(){
+
+		var actualWidth = window.innerWidth;
+
+		galleryOpacity(actualWidth);
+
 	});
 
 
@@ -101,6 +139,17 @@ $(document).ready(function(){
 
 	$('.reviews__next').on('click', function(){
 	  owl.next();
+	});
+
+
+	$(window).resize(function(){
+
+		var actualWidth = window.innerWidth;
+
+		if(actualWidth < 768){
+
+			$('.reviews__blockquote').css('width',actualWidth);
+		}
 	});
 
 
@@ -187,8 +236,6 @@ $(document).ready(function(){
 
 	/* добавление карусели при размере окна от 768px до 1200px */
 
-	var windowWidth = window.innerWidth;
-
 	function roomsCarousel (){
 
 		if((windowWidth >= 768) && (windowWidth < 1200)){
@@ -241,8 +288,6 @@ $(document).ready(function(){
 	/* календарь на странице form */
 
 	$(function() {
-
-    //$("#datepicker-arrival").datepicker();
 
     $("#datepicker-arrival").datepicker( {minDate: 0,} );
 

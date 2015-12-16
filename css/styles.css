@@ -663,10 +663,6 @@ input[type='number'] {
   overflow: hidden;
   list-style-type: none;
   background: #000;
-  opacity: 0.5;
-}
-.gallery__thumbnails:hover {
-  opacity: 1;
 }
 .gallery__item {
   height: 100%;
