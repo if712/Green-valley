@@ -244,22 +244,9 @@ $(document).ready(function(){
 
     //$("#datepicker-arrival").datepicker();
 
-    $( "#datepicker-arrival" ).datepicker({
-      //defaultDate: "+1w",
-      //changeMonth: true,
-      numberOfMonths: 1,
-      onClose: function( selectedDate ) {
-        $( "#datepicker-departure" ).datepicker( "option", "minDate", selectedDate );
-      }
-    });
-    $( "#datepicker-departure" ).datepicker({
-      //defaultDate: "+1w",
-      //changeMonth: true,
-      numberOfMonths: 1,
-      // onClose: function( selectedDate ) {
-      //   $( "#datepicker-arrival" ).datepicker( "option", "maxDate", selectedDate );
-      // }
-    });
+    $("#datepicker-arrival").datepicker( {minDate: 0,} );
+
+    $("#datepicker-departure").datepicker( {minDate: 0,} );
   });
 
 
