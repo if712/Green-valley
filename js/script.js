@@ -525,9 +525,9 @@ $(document).ready(function(){
 	/* на странице form выбор блока "Сейчас" при клике на любое место блока */
 
 
-	$('.payment__now').on('click', function(){
+	$('.payment__card').on('click', function(){
 
-			$('#pay-now').attr('checked','checked');
+		$('#pay-now').trigger('click');
 	});
 
 

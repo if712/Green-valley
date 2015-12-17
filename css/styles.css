@@ -3552,7 +3552,7 @@ input:checked ~ .payment__on-arrival-check-mark {
 }
 @media (min-width: 768px) {
   .payment__now {
-    height: 255px;
+    height: 257px;
   }
 }
 .payment__now-inner {
