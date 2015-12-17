@@ -3431,9 +3431,12 @@ input:checked ~ .type-of-cottage__triangle {
 .payment__to-pay-title {
   text-transform: uppercase;
 }
-.payment__to-pay-dash {
+.payment__to-pay-price {
   margin: 12px 0;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 500;
+  font-size: 24px;
+  color: #191919;
 }
 .payment__to-pay-warning {
   display: none;

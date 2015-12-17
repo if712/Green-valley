@@ -44,16 +44,16 @@
             <label for="datepicker-arrival">&#1044;&#1040;&#1058;&#1040; &#1042;&#1066;&#1045;&#1047;&#1044;&#1040;</label>
             <div class="date-of-rest__inputs date">
               <input id="datepicker-arrival" type="text" min="1" max="31" pattern="[0-9]{2}" name="dayOfArrival" placeholder="ДД" value="" required="" class="date-of-rest__inputs-day day">
-              <input type="number" min="1" max="12" pattern="[0-9]{2}" placeholder="ММ" name="mounthOfArrival" value="" required="" class="date-of-rest__inputs-month month">
-              <input type="number" min="2015" pattern="[0-9]{4}" name="yearOfArrival" placeholder="ГГГГ" value="" required="" class="date-of-rest__inputs-year year">
+              <input id="arrival-month" type="number" min="1" max="12" pattern="[0-9]{2}" placeholder="ММ" name="mounthOfArrival" value="" required="" class="date-of-rest__inputs-month month">
+              <input id="arrival-year" type="number" min="2015" pattern="[0-9]{4}" name="yearOfArrival" placeholder="ГГГГ" value="" required="" class="date-of-rest__inputs-year year">
             </div>
           </div>
           <div class="date-of-rest__departure">
             <label for="datepicker-departure">&#1044;&#1040;&#1058;&#1040; &#1042;&#1067;&#1045;&#1047;&#1044;&#1040;</label>
             <div class="date-of-rest__inputs date">
               <input id="datepicker-departure" type="text" min="1" max="31" pattern="[0-9]{2}" name="dayOfDeparture" placeholder="ДД" value="" required="" class="date-of-rest__inputs-day day">
-              <input type="number" min="1" max="12" pattern="[0-9]{2}" name="mounthOfDeparture" placeholder="ММ" value="" required="" class="date-of-rest__inputs-month month">
-              <input type="number" min="2015" pattern="[0-9]{4}" name="yearOfDeparture" placeholder="ГГГГ" value="" required="" class="date-of-rest__inputs-year year">
+              <input id="departure-month" type="number" min="1" max="12" pattern="[0-9]{2}" name="mounthOfDeparture" placeholder="ММ" value="" required="" class="date-of-rest__inputs-month month">
+              <input id="departure-year" type="number" min="2015" pattern="[0-9]{4}" name="yearOfDeparture" placeholder="ГГГГ" value="" required="" class="date-of-rest__inputs-year year">
             </div>
           </div>
         </div>
@@ -64,14 +64,14 @@
         <div class="place-to-stay__container">
           <div class="place-to-stay__hotel">
             <label>
-              <input type="radio" name="placeToStay" checked="checked">
+              <input id="hotel-input" type="radio" name="placeToStay" checked="checked">
               <div class="place-to-stay__hotel-title">&#1054;&#1058;&#1045;&#1051;&#1068;</div><img src="img/hotel.jpg" class="place-to-stay__img">
               <div class="place-to-stay__check-mark check-mark"></div>
             </label>
           </div>
           <div class="place-to-stay__cottage">
             <label>
-              <input type="radio" name="placeToStay">
+              <input id="cottage-input" type="radio" name="placeToStay">
               <div class="place-to-stay__cottage-title">&#1050;&#1054;&#1058;&#1058;&#1045;&#1044;&#1046;</div><img src="img/cottage.jpg" class="place-to-stay__img">
               <div class="place-to-stay__check-mark check-mark"></div>
             </label>
@@ -345,7 +345,7 @@
         <h2 class="payment__title">&#1057;&#1087;&#1086;&#1089;&#1086;&#1073; &#1086;&#1087;&#1083;&#1072;&#1090;&#1099;</h2>
         <div class="payment__container">
           <div class="payment__to-pay">
-            <div class="payment__to-pay-title">&#1050; &#1086;&#1087;&#1083;&#1072;&#1090;&#1077;</div><span class="payment__to-pay-dash">-</span>
+            <div class="payment__to-pay-title">&#1050; &#1086;&#1087;&#1083;&#1072;&#1090;&#1077;</div><span class="payment__to-pay-price">-</span>
             <div class="payment__to-pay-warning">
               <div class="payment__to-pay-warning-exclamation">!</div>&#1055;&#1086;&#1078;&#1072;&#1083;&#1091;&#1081;&#1089;&#1090;&#1072;,<a href="#datepicker-arrival" class="payment__to-pay-warning-date">&#1074;&#1099;&#1073;&#1077;&#1088;&#1080;&#1090;&#1077; &#1076;&#1072;&#1090;&#1091;</a>&#1074;&#1098;&#1077;&#1079;&#1076;&#1072; &#1080; &#1074;&#1099;&#1077;&#1079;&#1076;&#1072;, &#1095;&#1090;&#1086;&#1099;&#1073; &#1091;&#1074;&#1080;&#1076;&#1077;&#1090;&#1100; &#1089;&#1091;&#1084;&#1084;&#1091; &#1082; &#1086;&#1087;&#1083;&#1072;&#1090;&#1077;
             </div>

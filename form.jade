@@ -26,15 +26,15 @@ html(lang="en")
               | &#1044;&#1040;&#1058;&#1040; &#1042;&#1066;&#1045;&#1047;&#1044;&#1040;
             .date-of-rest__inputs.date
               input#datepicker-arrival.date-of-rest__inputs-day.day(type="text", min="1", max="31", pattern="[0-9]{2}", name="dayOfArrival", placeholder="ДД", value="", required="")
-              input.date-of-rest__inputs-month.month(type="number", min="1", max="12", pattern="[0-9]{2}", placeholder="ММ", name="mounthOfArrival", value="", required="")
-              input.date-of-rest__inputs-year.year(type="number", min="2015", pattern="[0-9]{4}", name="yearOfArrival", placeholder="ГГГГ", value="", required="")
+              input#arrival-month.date-of-rest__inputs-month.month(type="number", min="1", max="12", pattern="[0-9]{2}", placeholder="ММ", name="mounthOfArrival", value="", required="")
+              input#arrival-year.date-of-rest__inputs-year.year(type="number", min="2015", pattern="[0-9]{4}", name="yearOfArrival", placeholder="ГГГГ", value="", required="")
           .date-of-rest__departure
             label(for="datepicker-departure")
               | &#1044;&#1040;&#1058;&#1040; &#1042;&#1067;&#1045;&#1047;&#1044;&#1040;
             .date-of-rest__inputs.date
               input#datepicker-departure.date-of-rest__inputs-day.day(type="text", min="1", max="31", pattern="[0-9]{2}", name="dayOfDeparture", placeholder="ДД", value="", required="")
-              input.date-of-rest__inputs-month.month(type="number", min="1", max="12", pattern="[0-9]{2}", name="mounthOfDeparture", placeholder="ММ", value="", required="")
-              input.date-of-rest__inputs-year.year(type="number", min="2015", pattern="[0-9]{4}", name="yearOfDeparture", placeholder="ГГГГ", value="", required="")
+              input#departure-month.date-of-rest__inputs-month.month(type="number", min="1", max="12", pattern="[0-9]{2}", name="mounthOfDeparture", placeholder="ММ", value="", required="")
+              input#departure-year.date-of-rest__inputs-year.year(type="number", min="2015", pattern="[0-9]{4}", name="yearOfDeparture", placeholder="ГГГГ", value="", required="")
       section.place-to-stay
         h3.form-step
           | &#1064;&#1040;&#1043; 2
@@ -43,14 +43,14 @@ html(lang="en")
         .place-to-stay__container
           .place-to-stay__hotel
             label
-              input(type="radio", name="placeToStay", checked="checked")
+              input#hotel-input(type="radio", name="placeToStay", checked="checked")
               .place-to-stay__hotel-title
                 | &#1054;&#1058;&#1045;&#1051;&#1068;
               img.place-to-stay__img(src="img/hotel.jpg")
               .place-to-stay__check-mark.check-mark
           .place-to-stay__cottage
             label
-              input(type="radio", name="placeToStay")
+              input#cottage-input(type="radio", name="placeToStay")
               .place-to-stay__cottage-title
                 | &#1050;&#1054;&#1058;&#1058;&#1045;&#1044;&#1046;
               img.place-to-stay__img(src="img/cottage.jpg")
@@ -352,7 +352,7 @@ html(lang="en")
           .payment__to-pay
             .payment__to-pay-title
               | &#1050; &#1086;&#1087;&#1083;&#1072;&#1090;&#1077;
-            span.payment__to-pay-dash
+            span.payment__to-pay-price
               | -
             .payment__to-pay-warning
               .payment__to-pay-warning-exclamation
