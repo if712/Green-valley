@@ -554,7 +554,7 @@ input[type='number'] {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   border: none;
-  background: url('../img/btn.jpg') no-repeat;
+  background: url('../img/btn.png') no-repeat;
   background-position: 20px 10px;
   padding-left: 20px;
 }
@@ -922,18 +922,36 @@ input[type='number'] {
   }
 }
 .reviews__prev {
-  left: 10%;
   border-left: 3px solid #fafafa;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+@media (min-width: 1200px) {
+  .reviews__prev {
+    left: 8%;
+  }
+}
+@media (min-width: 1400px) {
+  .reviews__prev {
+    left: 12%;
+  }
+}
 .reviews__next {
-  right: 10%;
   border-right: 3px solid #fafafa;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+@media (min-width: 1200px) {
+  .reviews__next {
+    right: 8%;
+  }
+}
+@media (min-width: 1400px) {
+  .reviews__next {
+    right: 12%;
+  }
 }
 .btn-green {
   width: 140px;

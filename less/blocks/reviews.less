@@ -213,17 +213,34 @@
 
 	&__prev{
 
-		left: 10%;
 		border-left: 3px solid @gray-lighter;
 		transform: rotate(45deg);
 
+		@media (min-width: 1200px){
+
+			left: 8%;
+		}
+
+		@media (min-width: 1400px){
+
+			left: 12%;
+		}
 	}
 
 	&__next{
 
-		right: 10%;
 		border-right: 3px solid @gray-lighter;
 		transform: rotate(-45deg);
+
+		@media (min-width: 1200px){
+
+			right: 8%;
+		}
+
+		@media (min-width: 1400px){
+
+			right: 12%;
+		}
 	}
 }
 
