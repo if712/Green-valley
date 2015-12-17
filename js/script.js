@@ -260,8 +260,9 @@ $(document).ready(function(){
 
 		var windowResizeWidth = $(window).width();
 		var roomsId = $(".rooms__list").attr("id");
+		console.log(roomsId);
 
-		if(((windowResizeWidth >= 768) && (windowResizeWidth < 1200)) && (roomsId == "")){
+		if(((windowResizeWidth >= 768) && (windowResizeWidth < 1200)) && ((roomsId == "") || (roomsId == undefined))){
 
 			$(".rooms__list").attr("id","rooms-carousel");
 
