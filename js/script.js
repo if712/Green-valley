@@ -56,8 +56,6 @@ $(document).ready(function(){
 
 	function galleryOpacity(actualWidth){
 
-			console.log(actualWidth);
-
 		if(actualWidth >= '768'){
 
 
@@ -286,6 +284,7 @@ $(document).ready(function(){
 
 
 
+
 	/* календарь на странице form */
 
 	$(function() {
@@ -295,30 +294,57 @@ $(document).ready(function(){
     $("#datepicker-departure").datepicker( {minDate: 0,} );
   });
 
+	var arrivalDate = new Date();
+	var dateOfDeparture = new Date();
 
-	function divideDate(id){
+
+	function divideDate(id, order){
 
 		console.log('Элемент #datepicker-arrival был изменен.');
+		console.log('order=' + order);
 
 		var inputDatepicker = document.querySelector('#' + id).value;
 		console.log(inputDatepicker);
 
+
 		if(inputDatepicker.length > 2){
 
-			document.querySelector('#' + id).value = inputDatepicker.substr(3,2);
-			document.querySelector('#' + id).parentNode.children[1].value = inputDatepicker.substr(0,2);
-			document.querySelector('#' + id).parentNode.children[2].value = inputDatepicker.substr(6,4);
-			$('#' + id).parent().children().css('color', '#0ab89d');
-		}
+			var dt = new Date(inputDatepicker);
 
+			var month = dt.getMonth()+1;
+			var day = dt.getDate();
+			var year = dt.getFullYear();
+			console.log(month + ' ' + day + ' ' + year);
+
+			document.querySelector('#' + id).value = day;
+			document.querySelector('#' + id).parentNode.children[1].value = month;
+			document.querySelector('#' + id).parentNode.children[2].value = year;
+			$('#' + id).parent().children().css('color', '#0ab89d');
+
+			if(order == 1){
+
+				console.log('order1==' + order);
+
+				arrivalDate = new Date(inputDatepicker);
+				console.log('arrivalDate1 == ' + arrivalDate);
+			}
+			else if(order == 2){
+
+				console.log('order2==' + order);
+
+				dateOfDeparture = new Date(inputDatepicker);
+				console.log('dateOfDeparture2 == ' + dateOfDeparture);
+			}
+		}
 	}
+
 
 	$('#datepicker-arrival').change(function(){
 
 		var arrivalId = $(this).attr('id');
 		console.log(arrivalId);
 
-	  divideDate(arrivalId);
+	  divideDate(arrivalId, 1);
 	});
 
 
@@ -327,7 +353,7 @@ $(document).ready(function(){
 	  var departureId = $(this).attr('id');
 		console.log(departureId);
 
-	  divideDate(departureId);
+	  divideDate(departureId, 2);
 	});
 
 
@@ -350,21 +376,8 @@ $(document).ready(function(){
 
 		  	$(this).next().focus();
 		  }
-		})
-	}
 
-	function inputFocusout(elem){
-
-		elem.addEventListener("keyup", function(event) {
-
-			console.log('inputFocusout Элемент day был изменен - keyup.');
-
-		  var yearValue = $(this).val();
-		  var yearLength = yearValue.length;
-		  console.log('inputFocusout yearValue == ' + yearValue);
-		  console.log('inputFocusout yearValue-length == ' + yearValue.length);
-
-			if(yearLength == 4){
+		  else if(inputLength == 4){
 
 		  	console.log('focusout');
 		  	$(this).focusout();
@@ -373,19 +386,9 @@ $(document).ready(function(){
 	}
 
 
-	$('.day').focus(function(){
+	$('.date input').focus(function(){
 
 	  inputTab(this);
-	});
-
-	$('.month').focus(function(){
-
-	  inputTab(this);
-	});
-
-	$('.year').focus(function(){
-
-	  inputFocusout(this);
 	});
 
 
@@ -432,7 +435,36 @@ $(document).ready(function(){
 
 
 
-	/* на странице form переключатель блока выбора номера и блока выбора типа коттеджа */
+	/* на странице form - подсчет количества дней */
+
+
+	function daysInterval(){
+
+		console.log(arrivalDate + " ------ daysInterval");
+		console.log(dateOfDeparture + " ----- daysInterval");
+
+
+		var msecPerDay = 1000 * 60 * 60 * 24;
+
+		var dateMsec1 = arrivalDate.getTime();
+		var dateMsec2 = dateOfDeparture.getTime();
+
+		var interval = dateMsec2 - dateMsec1;
+
+		var days = Math.floor(interval / msecPerDay);
+
+		console.log(days + " ++++++++++++++++++++++ days");
+
+	}
+
+	$('.date').change(function(){
+
+		daysInterval();
+	});
+
+
+
+	/* на странице form - переключатель блока выбора номера и блока выбора типа коттеджа */
 
 	$(".place-to-stay__hotel label").on('click', function(){
 
