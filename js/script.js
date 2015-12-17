@@ -309,6 +309,7 @@ $(document).ready(function(){
 			document.querySelector('#' + id).parentNode.children[2].value = inputDatepicker.substr(6,4);
 			$('#' + id).parent().children().css('color', '#0ab89d');
 		}
+
 	}
 
 	$('#datepicker-arrival').change(function(){
@@ -399,15 +400,17 @@ $(document).ready(function(){
 		var check = function(i, boolean){
 
 			var dateValue = dates[i].value;
+			var dateLength = dateValue.length;
+			console.log(dateLength);
 
-			if( (dateValue != "") && (i < 2) ){
+			if( (dateLength == 2) && (i < 2) ){
 
 				i++;
 
 				check(i, true);
 			}
 
-			else if((dateValue != "") && (i == 2)){
+			else if((dateLength == 4) && (i == 2)){
 
 				return result = true;
 			}
@@ -480,10 +483,16 @@ $(document).ready(function(){
 		var personalVal = $(this).val();
 		var inputType = $(this).attr('type');
 		var emailPattern=/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i;
+		var telPattern=/[\(\)0-9\+\-]{5,11}/i;
 
-		if((personalVal != "") && (inputType != "email")){
+		if((personalVal != "") && (inputType == "text")){
 
 			$(this).parent().children('.check-mark').css('display','block');
+		}
+
+		else if((personalVal == "") && (inputType == "text")){
+
+			$(this).parent().children('.check-mark').css('display','none');
 		}
 
 		else if((inputType == "email") && (emailPattern.test(personalVal))){
@@ -493,6 +502,18 @@ $(document).ready(function(){
 		}
 
 		else if((inputType == "email") && (emailPattern.test(personalVal) == false)){
+
+			$(this).parent().children('.check-mark').css('display','none');
+			$(this).parent().children('.error').css('display','block');
+		}
+
+		else if((inputType == "tel") && (telPattern.test(personalVal))){
+
+			$(this).parent().children('.check-mark').css('display','block');
+			$(this).parent().children('.error').css('display','none');
+		}
+
+		else if((inputType == "tel") && (telPattern.test(personalVal) == false)){
 
 			$(this).parent().children('.check-mark').css('display','none');
 			$(this).parent().children('.error').css('display','block');
