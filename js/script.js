@@ -119,36 +119,73 @@ $(document).ready(function(){
 
 
 
-	/* reviews-carousel */
+	/* reviews-carousel - добавление карусели при размере окна от 1200px */
 
-	$("#reviews-carousel").owlCarousel({
-		items : 2,
-		itemsCustom : [[768, 1]],
-		rewindNav : true,
-		pagination : false,
-	});
+	function reviewsCarousel (){
 
-	var owl = $("#reviews-carousel").data('owlCarousel');
-	var carousel = $("#reviews-carousel");
+		if(windowWidth >= 1200){
 
-	$('.reviews__prev').on('click', function(){
-	  owl.prev();
-	});
+			$(".reviews__list-inner").attr("id","reviews-carousel");
 
-	$('.reviews__next').on('click', function(){
-	  owl.next();
-	});
+			$("#reviews-carousel").owlCarousel({
+				items : 1,
+				rewindNav : true,
+				pagination : false,
+			});
 
+			var owl = $("#reviews-carousel").data('owlCarousel');
+
+			$('.reviews__prev').on('click', function(){
+			  owl.prev();
+			});
+
+			$('.reviews__next').on('click', function(){
+			  owl.next();
+			});
+		}
+	}
+
+	reviewsCarousel();
+
+
+
+	/* reviews-carousel - добавление и удаление карусели при изменении размера окна */
 
 	$(window).resize(function(){
 
-		var actualWidth = window.innerWidth;
+		var windowResizeWidth1 = $(window).width();
+		var reviewsId = $(".reviews__list-inner").attr("id");
 
-		if(actualWidth < 768){
+		if((windowResizeWidth1 >= 1200) && ((reviewsId == "") || (reviewsId == undefined))){
 
-			$('.reviews__blockquote').css('width',actualWidth);
+			$(".reviews__list-inner").attr("id","reviews-carousel");
+
+			$("#reviews-carousel").owlCarousel({
+				items : 1,
+				rewindNav : true,
+				pagination : false,
+			});
+
+			var reviews = $("#reviews-carousel").data('owlCarousel');
+
+			$('.reviews__prev').on('click', function(){
+			  reviews.prev();
+			});
+
+			$('.reviews__next').on('click', function(){
+			  reviews.next();
+			});
 		}
+
+		else if((windowResizeWidth1 < 1200) && (reviewsId != "") && (reviewsId != undefined)){
+
+			$("#reviews-carousel").data('owlCarousel').destroy();
+
+			$(".reviews__list-inner").attr("id","");
+		}
+
 	});
+
 
 
 
@@ -228,7 +265,7 @@ $(document).ready(function(){
 
 
 
-	/* rooms-carousel - карусель на странице Single room - выбор номера */
+	/* rooms-carousel - карусель на странице Single room - выбор типа номера */
 
 
 	/* добавление карусели при размере окна от 768px до 1200px */
