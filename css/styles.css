@@ -1385,17 +1385,21 @@ input[type='number'] {
     background-position: center center;
   }
 }
+@media (min-width: 440px) {
+  .discount__item {
+    width: 100%;
+    height: 295px;
+    background-size: 100% auto;
+  }
+}
 @media (min-width: 768px) {
   .discount__item {
     background-size: 100% auto;
-    background-position: center center;
   }
 }
 @media (min-width: 1200px) {
   .discount__item {
     height: 335px;
-    background-size: 100% auto;
-    background-position: center center;
   }
 }
 .discount__item-textarea {
@@ -1603,6 +1607,9 @@ input[type='number'] {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+.recomendation__list-img {
+  width: 100%;
 }
 /* room-list */
 .page-caption {

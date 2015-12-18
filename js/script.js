@@ -287,9 +287,9 @@ $(document).ready(function(){
 
 	$(function() {
 
-    $("#datepicker-arrival").datepicker( {minDate: 0,} );
+    $("#datepicker-arrival").datepicker( {minDate: 0} );
 
-    $("#datepicker-departure").datepicker( {minDate: 0,} );
+    $("#datepicker-departure").datepicker( {minDate: 0} );
   });
 
 
@@ -677,7 +677,6 @@ $(document).ready(function(){
 
 
 	var selectPrice = 3400;
-	console.log('selectPrice == ' + selectPrice);
 
 	var economyPrice = 3400;
 	var standardPrice = 4000;
