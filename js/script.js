@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 	/* promo-slider */
 
+
 	var links = document.querySelectorAll(".promo-slider__paginator-item a");
 	var slides = document.querySelectorAll(".promo-slider__item");
 
@@ -31,6 +32,7 @@ $(document).ready(function(){
 		}
 
 	  linkSlide.classList.add("promo-slider__item--active");
+	  //linkSlide.style.opacity = '1';
 	}
 
 
@@ -38,6 +40,37 @@ $(document).ready(function(){
 
 	  links[i].addEventListener("click", changeTab);
 	}
+
+
+	// var links = document.querySelectorAll(".promo-slider__paginator-item a");
+	// var slides = document.querySelectorAll(".promo-slider__item");
+
+	// function changeTab(e){
+
+	//   e.preventDefault();
+
+	//   for (var i=0, j=links.length; i<j; i++) {
+
+	//     links[i].parentNode.classList.remove("promo-slider__paginator-item--active");
+	// 	}
+
+	//   this.parentNode.classList.add("promo-slider__paginator-item--active");
+	//   var link = this.getAttribute("href");
+	//   var linkSlide = document.querySelector(link);
+
+ //    for (var i=0, j=slides.length; i<j; i++) {
+
+	// 	  slides[i].classList.remove("promo-slider__item--active");
+	// 	}
+
+	//   linkSlide.classList.add("promo-slider__item--active");
+	// }
+
+
+	// for (var i=0, j=links.length; i<j; i++) {
+
+	//   links[i].addEventListener("click", changeTab);
+	// }
 
 
 	/* gallery-carousel */
@@ -200,14 +233,15 @@ $(document).ready(function(){
 
 
 
-	/* room-gallery-carousel - галерея на странице Single room - фото номера */
+	/* room-gallery-carousel - галерея на страницах Single room и Коттедж - фото номера */
 
 	$("#room-gallery-carousel").owlCarousel({
 		items : 1,
 		itemsCustom : [[320, 1]],
 		rewindNav : false,
 		pagination : false,
-		addClassActive: true
+		addClassActive: true,
+		rewindNav: true,
 	});
 
 	var singleRoom = $("#room-gallery-carousel").data('owlCarousel');
@@ -234,12 +268,12 @@ $(document).ready(function(){
 		var zoomWindowWidth = window.innerWidth;
 
 		$('.img-fullscreen').css('display','block');
-		$('.img-fullscreen img').css('width',zoomWindowWidth);
+		$('.img-fullscreen img').css('width',zoomWindowWidth * 0.7);
 		$('.img-fullscreen img').attr('src',activeImgSrc);
 
-		$('section').css('opacity','0.9');
-		$('header').css('opacity','0.9');
-		$('footer').css('opacity','0.9');
+		$('section').css('opacity','0.4');
+		$('header').css('opacity','0.4');
+		$('footer').css('opacity','0.4');
 	});
 
 	$(".img-fullscreen__close").on('click', function(){
